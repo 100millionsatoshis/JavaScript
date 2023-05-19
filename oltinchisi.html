@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kamoliddin Muminov" />
+    <meta
+      name="description"
+      content="JavaScript haqida qisqacha ma'lumot. JavaScript nilarga qodir? document.getElementById bilan HTML tarkibini o'zgartirish (.innerHTML)"
+    />
+    <title>JavaScript 6-chi dars</title>
+    <link
+      rel="icon"
+      href="/MarraUniversity/media/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="js.css" />
+  </head>
+  <body>
+    <header class="mainMenu">
+      <ul>
+        <li><a href="/MarraUniversity/index.html">Uyga</a></li>
+        <li><a href="#sahifaBoshi">Sahifa boshiga</a></li>
+      </ul>
+      <details>
+        <summary>
+          <h3>HTML darslar jadvali</h3>
+        </summary>
+        <ol>
+          <li>
+            <a href="/MarraUniversity/html/darsining/birinchisi.html">
+              HTML bilan tanishuv
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/ikkinchisi.html">
+              HTML &lt;head&gt; elementi
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/uchinchisi.html">
+              Matnga ishlov berish
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/tortinchisi.html">
+              Izoh
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/beshinchisi.html">
+              Ro'yxatlar
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/oltinchisi.html">
+              Havolalar
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/yettinchisi.html">
+              Tasvirlar
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/sakkizinchisi.html">
+              Semantik teglar
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/toqqizinchisi.html">
+              Jadvallar yaratish
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/oninchisi.html">
+              Shakllar va kiritishlar
+            </a>
+          </li>
+        </ol>
+      </details>
+      <details>
+        <summary class="jadvalBoshMenyusi">
+          <h3>CSS darslar jadvali</h3>
+        </summary>
+        <ol>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/birinchisi.html"> CSS bilan tanishuv </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/ikkinchisi.html"> Matnga jilo berish </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/uchinchisi.html">
+              Ranglar, orqa fon, ro'yxat, havola va kursor
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/tortinchisi.html">
+              Hoshiya, quti modeli va joylashuv
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/beshinchisi.html">
+              O'lchov birliklari va box-sizing hususiyati
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/oltinchisi.html"> Joylashtirish </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/yettinchisi.html">Qo'shma tanlovchilar</a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/sakkizinchisi.html">
+              Soxta klas va soxta element tanlovchilari
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/toqqizinchisi.html">
+              Flexbox
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/oninchisi.html">
+              Grid
+            </a>
+          </li>
+        </ol>
+      </details>
+      <details>
+        <summary>
+          <h3>JavaScript</h3>
+        </summary>
+        <ol>
+          <li>
+            <a href="/MarraUniversity/JavaScript/birinchisi.html">
+              JavaScript nimalarga qodir?
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/ikkinchisi.html">
+              Qayerga va qanday? 
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/uchinchisi.html">
+              JavaScript chiqishi (output) 
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/tortinchisi.html">
+              Amallar (Operatorlar)
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/beshinchisi.html">
+              O'zgaruvchilar (Operatorlar)
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/oltinchisi.html">
+              Malumot turlari
+            </a>
+          </li>
+        </ol>
+      </details>
+    </header>
+    <section class="main" id="oltinchisi">
+      <h1 id="sahifaBoshi">
+        6-chi dars: <br />
+        Malumot turlari
+      </h1>
+      <p>
+        Ushbu darsda JavaScriptda mavjud bo'lgan malumot turlari haqida
+        gaplashamiz. Biz o'zgaruvchilarga matn va raqam tayinlab ular haqida
+        biroz tushunchaga ega bo'ldik. Endi ma'lumot turlari haqida chuqurroq
+        urganamiz.
+      </p>
+      <nav>
+        <p>Mundarija:</p>
+        <ul>
+          <li>
+            <a href="#stringVaSon">String va sonlar</a>
+          </li>
+          <li>
+            <a href="#boolean">Boolean</a>
+          </li>
+        </ul>
+      </nav>
+      <hr />
+      <article id="stringVaSon">
+        <h3>Malumot turlari: String va sonlar</h3>
+        <p>
+          JavaScriptda matn "string" deb ataladi. <i>string deb o'qiladi</i>.
+          String har doim qo'shtirnoq ("")(yoki yakkatirnoq ('') ) ichida
+          yoziladi. Agar raqam qo'shtirnoq ichida yozilsa u ham string
+          hisoblanadi. Masalan:
+        </p>
+        <pre>
+<code>
+  let x = "yashashdan maqsad"; //bu string
+  let y = "42"; //bu ham string
+</code><span class="tilNomi">JS</span>
+</pre>
+        <p>
+          String ko'rinishidagi raqamlar arifmetik amallari siz kutgan
+          natijasini bermasligi mumkin. Masalan:
+        </p>
+        <pre>
+<code>
+  &lt;script&gt;
+    let olmasoni = "5";
+    let shaftolisoni = "6";
+    let jami = olmasoni + shaftolisoni;
+  &lt;/script&gt;
+  &lt;button onclick="alert(jami)"&gt;
+    jami
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+        <script>
+          let olmasoni = "5";
+          let shaftolisoni = "6";
+          let jami = olmasoni + shaftolisoni;
+        </script>
+        <button onclick="alert(jami)">jami</button>
+        <p>
+          Yuqoridagi misolda natija 11 emas, balki 56. Chunki "5" va "6" raqam
+          emas, ular string.
+        </p>
+        <p>
+          Raqamlar butun sonlar yoki o'nli kasr ko'rinishida bo'lishi nmumkin.
+          Masalan:
+        </p>
+        <pre>
+<code>
+  let MeningBalim = 7;
+  let DostimningBali = 6.5;
+</code><span class="tilNomi">JS</span>
+</pre>
+        <p>O'nli kasrlar vergul bilan emas, nuqta (.) bilan yoziladi.</p>
+      </article>
+      <article id="boolean">
+        <h3>Booleanlar</h3>
+        <p>
+          Ba'zidan vebsahifada foydalanuvchi "ha" yoki "yo'q" deb javob berishi
+          kerak bo'ladi. Bunday xollarda va chunga o'xshash xollarda
+          booleanlardan foydalaniladi. Boolean ko'rsatgich ikkita bo'ladi:
+        </p>
+        <dl>
+          <dt>true;</dt>
+          <dd>
+            o'zbek tiliga "to'g'ri" deb tarjima qilinadi
+            <i>tru deb o'qiladi,</i>
+          </dd>
+          <dt>false:</dt>
+          <dd>
+            o'zbek tiliga "noto'gri" yoki "yolg'on" deb tarjima qilinadi.
+            <i>fols deb o'qiladi</i>
+          </dd>
+        </dl>
+        <pre>
+<code>
+  let htmlniTamomlagan = true;
+  let javaScriptniTamomlagan = false;
+</code><span class="tilNomi">JS</span>
+</pre>
+        <p>
+          Raqamlarda ifodalansa <code>true</code> 1 raqamiga,
+          <code>false</code> 0 raqamiga teng bo'ladi. Lekin xozircha bunga
+          chuqurlashmaymiz. Keyingi darslarda bunga yana qaytamiz.
+        </p>
+      </article>
+      <hr />
+    </section>
+    <footer class="footer">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsum
+        quia tempore ad nostrum. Obcaecati distinctio qui quos eligendi. Nihil
+        ullam officiis labore libero aliquid cum maiores autem consequuntur
+        facilis!
+      </p>
+    </footer>
+  </body>
+</html>
