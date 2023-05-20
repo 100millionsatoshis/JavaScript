@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Kamoliddin Muminov" />
+    <meta
+      name="description"
+      content="JavaScript haqida qisqacha ma'lumot. JavaScript nilarga qodir? document.getElementById bilan HTML tarkibini o'zgartirish (.innerHTML)"
+    />
+    <title>JavaScript kursi</title>
+    <link
+      rel="icon"
+      href="/MarraUniversity/media/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="js.css" />
+  </head>
+  <body>
+    <header class="mainMenu">
+      <ul>
+        <li><a href="/MarraUniversity/index.html">Uyga</a></li>
+      </ul>
+      <details>
+        <summary>
+          <h3>HTML darslar jadvali</h3>
+        </summary>
+        <ol>
+          <li>
+            <a href="/MarraUniversity/html/darsining/birinchisi.html">
+              HTML bilan tanishuv
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/ikkinchisi.html">
+              HTML &lt;head&gt; elementi
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/uchinchisi.html">
+              Matnga ishlov berish
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/tortinchisi.html">
+              Izoh
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/beshinchisi.html">
+              Ro'yxatlar
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/oltinchisi.html">
+              Havolalar
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/yettinchisi.html">
+              Tasvirlar
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/sakkizinchisi.html">
+              Semantik teglar
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/toqqizinchisi.html">
+              Jadvallar yaratish
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/html/darsining/oninchisi.html">
+              Shakllar va kiritishlar
+            </a>
+          </li>
+        </ol>
+      </details>
+      <details>
+        <summary class="jadvalBoshMenyusi">
+          <h3>CSS darslar jadvali</h3>
+        </summary>
+        <ol>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/birinchisi.html">
+              CSS bilan tanishuv
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/ikkinchisi.html">
+              Matnga jilo berish
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/uchinchisi.html">
+              Ranglar, orqa fon, ro'yxat, havola va kursor
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/tortinchisi.html">
+              Hoshiya, quti modeli va joylashuv
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/beshinchisi.html">
+              O'lchov birliklari va box-sizing hususiyati
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/oltinchisi.html">
+              Joylashtirish
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/yettinchisi.html"
+              >Qo'shma tanlovchilar</a
+            >
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/sakkizinchisi.html">
+              Soxta klas va soxta element tanlovchilari
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/toqqizinchisi.html">
+              Flexbox
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/CSS/darsining/oninchisi.html"> Grid </a>
+          </li>
+        </ol>
+      </details>
+      <details>
+        <summary>
+          <h3>JavaScript</h3>
+        </summary>
+        <ol>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#birinchisi"
+              >JavaScript nimalarga qodir?</a
+            >
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#ikkinchisi"
+              >Qayerga va qanday?
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#uchinchisi"
+              >JavaScript chiqishi (output)</a
+            >
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#tortinchisi"
+              >O'zgaruvchilar (veriebl)</a
+            >
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#beshinchisi"
+              >Amallar (Operatorlar)</a
+            >
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#oltinchisi"
+              >Malumot turlari
+            </a>
+          </li>
+        </ol>
+      </details>
+    </header>
+    <main class="main">
+      <section id="birinchisi">
+        <h1>
+          1-chi dars: <br />
+          JavaScript nimalarga qodir?
+        </h1>
+        <hr />
+        <nav>
+          <ul>
+            <li><a href="#tanishuv">JavaScript bilan tanishuv</a></li>
+            <li>
+              <a href="#htmlniohzgartirish">JavaScript HTMLni o'zgarta oladi</a>
+            </li>
+            <li>
+              <a href="#cssniohzgartirish">JavaScript CSSni o'zgartira oladi</a>
+            </li>
+            <li>
+              <a href="#htmlElementniYashirish"
+                >JavaScript HTML elementni yashiri mumkin</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <hr />
+        <article id="tanishuv">
+          <h2>JavaScript bilan tanishuv</h2>
+          <p>
+            JavaScript kursini boshlashdan oldin quyidagi qiziqarli faktlar
+            bilan tanishib chiqing:
+          </p>
+          <ul>
+            <li>
+              JavaScript dunyodagi eng keng tarqalgan dasturlash tillaridan
+              biridir.
+            </li>
+            <li>
+              JavaScriptni yuklab olish shart emas. U allaqachon sizning
+              kompyuteringiz brauzeriga o'rnatilgan.
+            </li>
+            <li>JavaScript hamma uchun bepul.</li>
+            <li>JavaScriptni urganish oson.</li>
+            <li>
+              JavaScript yordamida vebsahifalarni interaktiv (muloqotkor) qilib
+              yasash mumkin.
+            </li>
+            <li>
+              JavaScript veb dasturchilar urganishi shart bo'lgan 3 ta
+              dasturlash tilidan biridir. HTML, CSS, JavaScript
+            </li>
+          </ul>
+        </article>
+        <hr />
+        <article id="htmlniohzgartirish">
+          <h2>JavaScript HTMLni o'zgarta oladi</h2>
+          <p>
+            Masalan, quyida matn va tugma berilgan. Tugmaga bosilganda matn
+            o'zgarib qoladi.
+          </p>
+          <p id="misolUchun">
+            JavaScript HTML elementi tarkibini o'zgartirishga qodir.
+          </p>
+          <button
+            type="button"
+            onclick='document . getElementById ( "misolUchun" ) . innerHTML = 
+                  " Salom, JavaScript! " '
+          >
+            Meni bos
+          </button>
+          <details>
+            <summary>Kod qismini ko'rsat</summary>
+            <pre>
+  <code>
+      &lt;p id="misolUchun"&gt; 
+          JavaScript HTML elementi tarkibini o'zgartirishga qodir 
+      &lt;/p&gt;
+      &lt;button 
+          type="button" 
+          onclick='document.getElementById("misolUchun").innerHTML = 
+          "Salom JavaScript"'&gt;
+              Meni bos 
+      &lt;/button&gt;
+  </code><span class="tilNomi">HTML</span>
+  </pre>
+          </details>
+          <p>
+            JavaScriptda ham qo'shtirnoq ham yakka tirnoqlardan foydalanish
+            mumkin.
+          </p>
+          <p>
+            Quyidagi misolda ikkita tasvirdan foydalandik. Biri qorong'ulik
+            bo'lsa ikkinchisi chiroq rasmi. keyin ikkita
+            <code>button</code> tegi yaratib ularning biriga yoqish ikkinchisiga
+            o'chirish deb yozamiz:
+          </p>
+          <pre>
+  <code>
+      &lt;img id="meningTasvirim" src="qorong'ulik.png"&gt;
+      &lt;button 
+          onclick="document.getElementById('meningTasvirim').src='qoronghulik.png'"&gt;
+      &lt;/button&gt;
+      &lt;button 
+          onclick="document.getElementById('meningTasvirim').src='chiroq.png'"&gt;
+      &lt;/button&gt;
+  </code><span class="tilNomi">HTML</span>
+  </pre>
+          <figure>
+            <img
+              id="meningTasvirim"
+              src="/MarraUniversity/JavaScript/media/darkness.png"
+              alt="qorong'ulik"
+            />
+            <figcaption>
+              Pastdagi tugmalarni bosib tasvir o'zgarishini kuzating.
+            </figcaption>
+          </figure>
+          <button
+            onclick="document.getElementById('meningTasvirim').src='/MarraUniversity/JavaScript/media/darkness.png'"
+          >
+            Chiroqni o'chirish
+          </button>
+          <button
+            onclick="document.getElementById('meningTasvirim').src='/MarraUniversity/JavaScript/media/lightbulb.jpg'"
+          >
+            Chiroqni yoqish
+          </button>
+        </article>
+        <hr />
+        <article id="cssniohzgartirish">
+          <h2>JavaScript CSSni o'zgartira oladi</h2>
+          <p id="cssniohzgartirishgamisol">
+            JavaScript bilan HTML fasonini o'zgartirish mumkin. Masalan:
+          </p>
+          <button
+            type="button"
+            onclick="document.getElementById('cssniohzgartirishgamisol').style.fontSize='3rem'"
+          >
+            Meni bos
+          </button>
+          <p>
+            Yuqoridagi effektga erishish uchun avval kattalashishi kerak bo'lgan
+            element yoziladi. elementga id hossa beriladi. Keyin button tegi
+            yordamida tugma yaratiladi va quyidagi JavaScript kodi yoziladi:
+          </p>
+          <pre>
+  <code>
+      &lt;p id="misolUchun"&gt;
+          JavaScript bilan HTML fasonini o'zgartirish mumkin. Masalan: 
+      &lt;/p&gt;
+      &lt;button 
+          type="button" 
+          onclick="document.getElementById('misolUchun').style.fontSize='3rem'"
+          &gt; 
+          Meni bos 
+      &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+        </article>
+        <hr />
+        <article id="htmlElementniYashirish">
+          <h2>JavaScript HTML elementni yashirish mumkin</h2>
+          <p>JavaScript yordamida HTML elementni o'chirish mumkin.</p>
+          <aside>
+            Dasturlashda yuqotish va yashirish bir-biridan farq qiluvchi
+            tushuncha buni bir-biri bilan adashtirib yubormang. Masalan:
+            <code>display: none;</code> elementni yo'qotadi, element o'z joyini
+            boshqa elementga bo'shatib beradi, lekin element butunlay o'chib
+            ketmaydi faqatgina foydalanuvchiga ko'rinmaydi xolos.
+            <code>visibility: hidden;</code> elementni yashiradi, element
+            foydalanuvchiga ko'rinmaydi lekin element o'z joyini boshqa
+            elementga bo'shatib bermaydi va o'z joyini saqlab qoladi.
+          </aside>
+          <p>
+            Quyida JavaScript yordamida HTML elementni yo'qotish (display:none)
+            va yashirishga (visibility: hidden) misol keltiramiz:
+          </p>
+          <pre>
+  <code>
+      &lt;p id="ohchirish"&gt;
+          Tugma bosilganda ushbu element o'chiriladi.
+      &lt;/p&gt;
+      &lt;button 
+          onclick="document.getElementById('ohchirish').style.display='none'"&gt;
+          O'chir
+      &lt;/button&gt;
+      &lt;p id="yashirish"&gt;
+          Tugma bosilganda ushbu element yashiriladi.
+      &lt;/p&gt;
+      &lt;button 
+          onclick="document.getElementById('yashirish').style.visibility='hidden'"&gt;
+          Yashir
+      &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <p id="ohchirish">Tugma bosilganda ushbu element o'chiriladi.</p>
+          <button
+            onclick="document.getElementById('ohchirish').style.display='none'"
+          >
+            O'chir
+          </button>
+          <p id="yashirish">Tugma bosilganda ushbu element yashiriladi.</p>
+          <button
+            onclick="document.getElementById('yashirish').style.visibility='hidden'"
+          >
+            Yashir
+          </button>
+          <p>
+            Xuddi shu yusinda <code>display: block;</code> va
+            <code>visibility: visible;</code> o'chirilgan va yashirilgan
+            elementlarni joyiga qaytaradi. Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;p id="ohchirish"&gt;
+        Tugma bosilganda ushbu element o'chiriladi.
+    &lt;/p&gt;
+    &lt;button 
+        onclick="document.getElementById('ohchirish').style.display='none'"&gt;
+        O'chir
+    &lt;/button&gt;
+    &lt;button 
+        onclick="document.getElementById('ohchirish').style.display='block'"&gt;
+        Qaytar
+    &lt;/button&gt;
+    &lt;p id="yashirish"&gt;
+        Tugma bosilganda ushbu element yashiriladi.
+    &lt;/p&gt;
+    &lt;button 
+        onclick="document.getElementById('yashirish').style.visibility='hidden'"&gt;
+        Yashir
+    &lt;/button&gt;
+    &lt;button 
+        onclick="document.getElementById('yashirish').style.visibility='visible'"&gt;
+        Ko'rsat
+    &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <p id="ohchirish2">Tugma bosilganda ushbu element o'chiriladi.</p>
+          <button
+            onclick="document.getElementById('ohchirish2').style.display='none'"
+          >
+            O'chir
+          </button>
+          <button
+            onclick="document.getElementById('ohchirish2').style.display='block'"
+          >
+            Qaytar
+          </button>
+          <p id="yashirish2">Tugma bosilganda ushbu element yashiriladi.</p>
+          <button
+            onclick="document.getElementById('yashirish2').style.visibility='hidden'"
+          >
+            Yashir
+          </button>
+          <button
+            onclick="document.getElementById('yashirish2').style.visibility='visible'"
+          >
+            Ko'rsat
+          </button>
+          <p>
+            Ham tarkibiy tuzilishi ham uslubiga ko'ra JavaSript va Java bir
+            biridan butunlay farqli dasturlash tillaridir. JavaScript 1995-yilda
+            Brendan Eich tomonidan yaratilgan va 1997-yilda ECMA standartiga
+            aylanadi. Standartning rasmiy nomi ECMA-262. Tilning rasmiy nomi
+            ECMAScript.
+          </p>
+        </article>
+      </section>
+      <section id="ikkinchisi">
+        <h1>
+          2-chi dars: <br />
+          Qayerga va qanday?
+        </h1>
+        <hr />
+        <nav>
+          <ul>
+            <li>
+              <a href="#jsQayergaVaQanday"
+                >JavaScript qayerga va qanday yoziladi?</a
+              >
+            </li>
+            <li>
+              <a href="#izoh">Izoh yozish</a>
+            </li>
+            <li>
+              <a href="#bayonot">JavaScript bayonot</a>
+            </li>
+          </ul>
+        </nav>
+        <hr />
+        <article id="jsQayergaVaQanday">
+          <h2>JavaScript qayerga va qanday yoziladi?</h2>
+          <p>
+            JavaScriptni xuddi CSS kabi HTML kodi ichiga joylash mumkin. Buning
+            uchun uni &lt;script&gt; and &lt;/script&gt; teglari orasiga joylash
+            kerak.
+          </p>
+          <pre>
+  <code>
+    &lt;script&gt;
+      document.getElementById("misolUchun").innerHTML = "1-chi JavaScript kodim";
+    &lt;/script&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <p>JavaScript kodini HTMLning &lt;head&gt; qismida yozish mumkin:</p>
+          <pre>
+  <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      &lt;script&gt;
+        function meningFunksiyam() {
+          document.getElementById("misolUchun").innerHTML = "yangi matn";
+        }
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;p id="misolUchun"&gt; Tugma bosilganda ushbu matn o'zgarib qoladi.&lt;/p&gt;
+      &lt;button type="button" onlick="meningFunksiyam()"&gt;
+         Bosib ko'r 
+      &lt;/button&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <p>
+            Yuqoridagi kodda "function" kalit so'zi ishlatilgan. Function
+            nimaligini tushunib olish uchun kundalik hayotdan misol keltiramiz:
+            Masalan sizga boshliq topshiriq berdi, topshiriq bir necha qismdan
+            iborat bo'lishi mumkin, masalan, biron joyga borish, kim bilandir
+            uchrashish, nimanidir sotib olish va va hokazorni o'z ochiga olishi
+            mumkin. Lekin bular bari bitta topshiriq hisoblanadi. Function
+            <i>fankshn deb o'qiladi</i> ingliz tilidan o'zbek tiliga "funksiya",
+            "vazifa" deb tarjima qilinadi. JavaScriptda vazifa yaratish uchun
+            "function" kalit so'zi yoziladi va vazifaga nom beriladi.
+            JavaScriptda vazifa chaqirilmaguncha ishlamay turadi, ya'ni vazifa
+            buyruq berilmaguncha bajarilmaydi. Yuqoridagi kodda vazifaga
+            (funksiyaga) "meningFunksiyam" deb nom berilgan.
+          </p>
+          <p>
+            <code>onclick</code> JavaScriptda voqea hossasi hisoblanadi.
+            <code>onclick</code> foydalanuvchi sichqoncha tugmasini tugmaga
+            (elementni) bosganda ishga tushadi va agar unga funksiya (vazifa)
+            tayinlangan bo'lsa o'sha vazifa ishga tushadi. Yuqoridagi kodda
+            button elementi ichida onclick hodisa hossasi (atributi) yozilgan va
+            u "meningFunksiyam" vazifasiga tayinlangan. Bu degani tugma
+            bosilganda "meningFunksiyam" ishga tushadi.
+          </p>
+          <p>JavaScriptni HTMLning &lt;body&gt; qismida joylash ham mumkin:</p>
+          <pre>
+  <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+      ...
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;p id="misolUchun"&gt; Tugma bosilganda ushbu matn o'zgarib qoladi.&lt;/p&gt;
+      &lt;button type="button" onlick="meningFunksiyam()"&gt;
+          Bosib ko'r 
+      &lt;/button&gt;
+      &lt;script&gt;
+        function meningFunksiyam() {
+          document.getElementById("misolUchun").innerHTML = "yangi matn";
+        }
+      &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <p>
+            JavaScript kod HTMLning body qismida joylashtirilganda, uni barcha
+            teglardan so'ng, body qismining eng so'ngida joylash maslahat
+            beriladi. Sababi brauzer yuqoridan pastga qarab o'qiydi, va
+            JavaScript o'qishga vaqt sarflamaydi va birinchi bo'lib kontentni
+            foydalanuvchiga ko'rsatadi va keyin JavaScript kodini o'qiydi.
+          </p>
+          <p>
+            JavaScript kodini HTMLning ham body ham head qismida joylash ham
+            mumkin.
+          </p>
+          <p>
+            Huddi CSSni alohida faylda yozish mumkin bo'lgani kabi JavaScriptni
+            ham alohida faylda yozish mumkin. Faylga istalgan nom berish mumkin
+            lekin faylning qo'shimchasi .js bo'lishi kerak. Masalan:
+          </p>
+          <figure>
+            <img
+              src="/MarraUniversity/JavaScript/media/HTMLCSSJSfilesubuntu.png"
+              alt=".html, .css va .js fayllari joylashgan fayl papkasining skrinshoti."
+            />
+            <figcaption>
+              .html, .css va .js fayllari joylashgan fayl papkasining skrinshoti
+            </figcaption>
+          </figure>
+          <p>
+            JavaScript kado alohida faylga yozilganda &lt;script&gt; tegi
+            yozilmaydi.
+          </p>
+          <figure>
+            <img
+              src="/MarraUniversity/JavaScript/media/HTMLCSSJSfilesubuntu2.png"
+              alt=".html, .css va .js fayllari joylashgan fayl papkasining skrinshoti va .js faylining ochilga holati."
+            />
+            <figcaption>
+              .html, .css va .js fayllari joylashgan fayl papkasining skrinshoti
+              va .js faylining ochilgan holati.
+            </figcaption>
+          </figure>
+          <p>
+            Tashqi .js JavaScript faylini HTMl faylga bog'lash uchun
+            <code>&lt;script&gt;</code> yaratiladi va va src hossasiga tashqi
+            .js fayli manzili bilan nomi yoziladi. Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;script src="meningFunksiyam.js"&gt;&lt;/script&gt;
+  </code><span class="tilNomi">HTML</span>
+  </pre>
+          <p>
+            <code>src</code> hossasiga beriladigan manzil 3 xil bo'lishi mumkin:
+          </p>
+          <ul>
+            <li>To'liq vebsahifa manzili</li>
+            <li>To'liq fayl manzili</li>
+            <li>Faqat fayl nomi</li>
+          </ul>
+          <p>
+            Bog'lovchi <code>&lt;script&gt;</code> tegi HTMLning head va yoki
+            body qismida joylashishi mumkin.
+          </p>
+          <p>Alohida faylda yozilgan JavaScript kodining avzalliklari:</p>
+          <ul>
+            <li>
+              HTML kodi va JavaScript kodi arashib, chalkashib ketmaydi, alohida
+              turadi.
+            </li>
+            <li>
+              HTML va JavaScript kodlari o'qishga va o'zgartirishga osonlashadi.
+            </li>
+            <li>Vebsahifa ochilish va ishlash tezligini biroz oshiradi.</li>
+            <li>
+              Bitta .js faylini bir-nechta .html faylida qo'llash mumkin.
+              Takrorlanishlarni oldini oladi.
+            </li>
+          </ul>
+        </article>
+        <hr />
+        <article id="izoh">
+          <h2>Izoh</h2>
+          <p>
+            Izoh yozilgan kodni izohlash uchun ishlatiladi. HTML va CSS da
+            bo'lgani kabi JavaScriptda izoh foydalanuvchiga ko'rinmaydi. Bir
+            qatorli izoh yozish uchun ikkita oldinga kesim belgisi (ingliz
+            tilida farqard slash deyiladi <i>forvort slesh deb o'qiladi.</i>)
+            ishlatiladi. Masalan:
+          </p>
+          <pre>
+  <code>
+    //matnni kattalashtiradi
+    document.getElementbyId('idHossaNommi').style.fontSize='3rem';
+  
+    //Ogohlantiruvchi oynaga xabar chiqarish 
+    alert("Ehtiyot bo'ling");
+  
+    console.log(4+5*3); //arifmetik amallar javobi
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            Agar kod nima bajarishini esdan chiqmasin desangiz kod yoniga izoh
+            qoldirish mumkin. Agar bitta kod ustida bir necha dasturchi ishlasa,
+            dasturchilar bir biriga kod yonida xabar qoldirishi mumkin. Maslan,
+            "kodni o'zgartirdim, hech kim tegmasin". Izohlardan doimo
+            foydalanish kerak.
+          </p>
+          <p>
+            Ko'p qatorli izoh yozish uchun oldinga kesim yulduzcha (/*) va
+            yulduzcha oldinga kesim (*/) ishlatiladi. Maslan:
+          </p>
+          <pre>
+  <code>
+    //matnni kattalashtiradi
+    document.getElementbyId('idHossaNommi').style.fontSize='3rem';
+  
+    /*Ogohlantiruvchi oynaga xabar chiqarish 
+    alert("Ehtiyot bo'ling");
+  
+    arifmetik amallar javobi
+    console.log(4+5*3) */;
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            Yuqoridagi misolda JavaScript kodi izohga aylantirilgan. Izohga
+            aylantirilgan JavaScript kod ishlamaydi.
+          </p>
+        </article>
+        <hr />
+        <article id="bayonot">
+          <h2>Bayonot (Statement)</h2>
+          <p>
+            Kompyuter dasturi kompyuter tomonidan bajarilishi kerak bo'lgan bir
+            qator "topshiriqlardan" iborat. Ushbu topshiriqlar dasturlash tilida
+            bayonot deyiladi. Ingliz tilida statement deyiladi
+            <i>steytment deb o'qiladi</i> JavaScript ham bayonotlardan iborat.
+            HTMLda JavaScript dasturi brauzer tomonidan bajariladi. JavaScript
+            bayonoti quyidagilardan iborat:
+          </p>
+          <ul>
+            <li>Ko'satgichlar (value)</li>
+            <li>Amallar (Operatorlar)</li>
+            <li>Ifoda (Expressions)</li>
+            <li>Kalit so'zlar (Keywords)</li>
+            <li>Izohlar (Comments)</li>
+          </ul>
+          <p>
+            JavaScript dasturi odatda ko'p bayonotlardan iborat bo'ladi. Ushbu
+            bayonotlar joylashuviga qarab birin ketin bajariladi.
+          </p>
+          <p>
+            Har bir bajarsa bo'ladigan bayonotdan so'ng nuqta vergul (;)
+            qo'yiladi. Masalan:
+          </p>
+          <pre>
+  <code>
+    document.getElementbyId('idHossaNommi').style.fontSize='3rem';
+    alert("Ehtiyot bo'ling");
+    console.log(4+5*3);
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            Nuqta vergul (;) bilan ajratilganda bayonotlarni bir qatorga
+            ketma-ket joylashtirish mumkin. Masalan:
+          </p>
+          <pre>
+  <code>
+    document.getElementbyId('idHossaNommi').style.fontSize='3rem';
+    alert("Ehtiyot bo'ling"); console.log(4+5*3);
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            Bayonot oxirida nuqta vergul qo'yish maslahat beriladi lekin
+            majburiy emas.
+          </p>
+          <p>
+            JavaScript ortiqcha qo'yilgan bo'shliqni e'tiborga olmaydi. Masalan
+            quyidagi ikkita bayonot bir xil kuchga ega:
+          </p>
+          <pre>
+  <code>
+    alert("Ehtiyot bo'ling");
+    alert ( " Ehtiyot bo'ling " );
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            JavaScriptda bayonotlarni chimchilangan qavslar ichida bir to'plamga
+            o'rash mumkin. JavaScript bayonotlarini bir to'plamga o'rashdan
+            maqsad ularni bar vaqtda bajarilishini taminlash. Quyida
+            <code> function </code>kalit so'zi yordamida JavaScript bayonotlari
+            bir tudaga o'ralgan:
+          </p>
+          <pre>
+  <code>
+    function meningFunksiyam {
+      alert(99 + 101);
+      console.log('Salom');
+    }
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            <code>function</code> kalit so'zi bilan funksiya yasalganda albatta
+            funksiyaga nom berish shart. Yuqoridagi misolda funksiya
+            "meningFunksiyam" deb nomlangan. Chunki bir nechta funksiya
+            yasalganda ular bir-biridan ajralib turishi kerak. Funksiyalar
+            haqida keyingi darslarda to'liqroq urganamiz.
+          </p>
+          <p>
+            E'tibor bergan bo'lsangiz yuqoridagii kodda bayonotlar
+            <code>function</code> kalit so'ziga nisbatan chapdan bo'shliq
+            tashlab ketilgan holda yozilgan. Bu ingliz tilida indentation
+            deyiladi, <i>indenteyshn deb o'qiladi</i> o'zbek tiliga chekinish
+            deb tarjima qilinadi.
+          </p>
+          <p>
+            <code>function</code> kalit so'zidan boshqa JavaScriptda quyidagi
+            kalit so'zlar bor:
+          </p>
+          <table class="jadval">
+            <tr>
+              <th>Kalit so'z</th>
+              <th>Ma'nosi va vazifasi</th>
+            </tr>
+            <tr>
+              <td>var</td>
+              <td>O'zgaruvchi e'lon qiladi</td>
+            </tr>
+            <tr>
+              <td>let</td>
+              <td>Blok o'zgaruvchi e'lon qiladi</td>
+            </tr>
+            <tr>
+              <td>const</td>
+              <td>blok o'zgarmas e'lon qiladi</td>
+            </tr>
+            <tr>
+              <td>if</td>
+              <td>Shartli ravishda bajariladigan bayonotlar to'plami</td>
+            </tr>
+            <tr>
+              <td>switch</td>
+              <td>Birin ketin bajariladigan bayonotlar to'plami</td>
+            </tr>
+            <tr>
+              <td>loop</td>
+              <td>Takror bajariladigan bayonotlar to'plami</td>
+            </tr>
+            <tr>
+              <td>return</td>
+              <td>funksiyani tugatib chiqish</td>
+            </tr>
+            <tr>
+              <td>try</td>
+              <td>bayonotlar to'plamiga xatolikni eplashni joriy qiladi</td>
+            </tr>
+          </table>
+          <p>
+            Kalit so'zlar zaxiraga olingan so'zlar hisoblanadi va o'zgaruvchilar
+            uchun nom bo'la olmaydi. Kalit so'zlarni keyingi darslarda chuqurroq
+            urganamiz.
+          </p>
+        </article>
+      </section>
+      <section id="uchinchisi">
+        <h1>
+          3-chi dars: <br />
+          JavaScript chiqishi (output)
+        </h1>
+        <nav>
+          <p>
+            JavaScript kodining natijasi quyidagicha 4 ta ko'rinishda namoyon
+            bo'ladi:
+          </p>
+          <ul>
+            <li>
+              <a href="#innerHTML">innerHTML orqali HTML elementining ichida</a>
+            </li>
+            <li>
+              <a href="#documentWrite"
+                >document.write() orqali HTMLning ichida</a
+              >
+            </li>
+            <li>
+              <a href="#windowAlert"
+                >window.alert() orqali ogohlantirish oynasida</a
+              >
+            </li>
+            <li>
+              <a href="#consoleLog"
+                >console.log() orqali brauzerning konsolida</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <hr />
+        <article id="innerHTML">
+          <h3>
+            innerHTML orqali JavaScriptni HTML elementining ichida paydo qilish.
+          </h3>
+          <p>
+            innerHTML ni JavaScript kursining 1-chi darsida qisqacha ko'rganmiz.
+            JavaScriptda metodlar foydalaniladi. Shunday metodlardan biri
+            getElementById(). Ushbu metod yordamida HTML tarkibini o'zgartirish
+            yoki yangi ma'lumot kiritish mumkin. Masalan, quyidagi misolda
+            keltirilgan JavaScript kod <code>id</code> hossasi "misolUchun" ga
+            teng bo'lgan HTML elementini topib uning tarkibiga (innerHTML)
+            ma'lumot kiritadi:
+          </p>
+          <pre>
+  <code>
+      &lt;p&gt; 
+          3 soatda necha minut bor?  
+      &lt;/p&gt; 
+      &lt;p id="misolUchun"&gt;&lt;/p&gt; 
+      &lt;button 
+          type="button" 
+          onclick='document.getElementById("misolUchun").innerHTML = 3 * 60'
+      &gt;
+          Javobni ko'rsat! 
+      &lt;/button&gt;
+  </code><span class="tilNomi">HTML</span>
+  </pre>
+          <p>Quyidagi natijaga ega bo'lamiz:</p>
+          <p>3 soatda necha minut bor?</p>
+          <p id="innerHTMLBilanMatnKiritish"></p>
+          <button
+            type="button"
+            onclick='document.getElementById("innerHTMLBilanMatnKiritish").innerHTML = 3 * 60'
+          >
+            Javobni ko'rsat!
+          </button>
+          <p>
+            innerHTML HTMLga JavaScript yordamida ma'lumot kiritishning eng ko'p
+            tarqalgan usuli hisoblanadi.
+          </p>
+        </article>
+        <hr />
+        <article id="documentWrite">
+          <h3>document.write() orqali HTMLning ichida ma'lumot yozish.</h3>
+          <p>
+            document.write() ko'p qo'llanilmasada uni urganib qo'yish ziyon
+            qilmaydi. Aslida ushbu usuldan foydalanish maslahat berilmaydi.
+            Quyidagi misolga qarang:
+          </p>
+          <pre>
+  <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
+      &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
+      &lt;script&gt;
+        document.write(5 + 6);
+      &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <p>
+            JavaScript <code>script</code> teglari orasida joylashgan yuqoridagi
+            kod brauzerda quyidagicha ko'rinadi:
+          </p>
+
+          <h1>Mening vebsahifam</h1>
+          <p>Birinchi paragraf.</p>
+          <script>
+            document.write(5 + 6);
+          </script>
+
+          <p>
+            Ushbu misolda JavaScript HTML bilan birga yuklanadi. Agar JavaScript
+            HTML yuklanib bo'lgandan keyin ishga tushsa butun HTML kodini
+            o'chirib yuboradi. Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
+      &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
+      &lt;button 
+        type="button" onclick="document.write(5+6)"&gt; Tekshirib ko'ring
+      &lt;/button&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <p>
+            HTML dokument yaratib ushbu kodni qanday ishlashini o'zingiz
+            mustaqil tekshirib ko'ring.
+          </p>
+        </article>
+        <hr />
+        <article id="windowAlert">
+          <h3>
+            JavaScriptni window.alert() orqali ogohlantirish oynasiga chiqarish
+          </h3>
+          <p>
+            Ogohlantirish oynasi ingliz tilida alert box deyiladi.
+            <i>alert boks deb o'qiladi</i> Quyidagi misolga qarang:
+          </p>
+          <pre>
+  <code>
+    ... 
+    &lt;button 
+    type="button" onclick="window.alert(10-2)"&gt;10-2=?&lt;/button&gt;
+    ...
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <p>
+            Ogohlantiruvchi oynani (alert box) ko'rish uchun quyidagi tugmani
+            bosib ko'ring:
+          </p>
+          <button type="button" onclick="window.alert(10-2)">10-2=?</button>
+          <p>
+            <code>window</code> kalit so'zini tushurib qoldirish mumkin. Buni
+            o'zingiz mustaqil tekshirib ko'ring
+          </p>
+        </article>
+        <hr />
+        <article>
+          <h3>console.log()</h3>
+          <p>
+            Kodni xatoliklardan xalos qilish (debugging) maqsadida ma'lumotlarni
+            brauzer konsoliga chiqarish uchun
+            <code>console.log()</code> metodidan foydalanish mumkin. Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;body&gt;
+      &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
+      &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
+      &lt;script&gt;
+        console.log(100 / 4);
+      &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <script>
+            console.log(100 / 4);
+            console.log("Hammaga Salom!");
+          </script>
+          <p>Brauzer konsolini ochish uchun:</p>
+          <ol>
+            <li>F12 tugmasini bosing</li>
+            <li>
+              Brauzerning pastki qismida ochilgan oynada yuqori qismida menyuda
+              console tugmasini topib bosing.
+            </li>
+          </ol>
+          <p>Konsolga keyingi darslarda yana qaytamiz.</p>
+          <p>
+            Esda turting: JavaScriptda matn qo'shtirniq ichida yoziladi. Raqam
+            esa qo'shtirnoqsiz yoziladi. Bu haqda keyingi darslarda to'liqroq
+            urganamiz.
+          </p>
+          <aside>
+            JavaScriptda hech qanday chop qilish (printerga chiqarish) obyekti
+            yoki medodi yuq. JavaScript bilan tashqi chop qiluvchi qurilmalarga
+            (printer) bog'lanib bo'lmaydi. Faqatgina window.print() metodi
+            orqali joriy ekranni (displayni) printerga chiqarish mumkin.
+            Masalan:
+          </aside>
+          <pre>
+  <code>
+    ...
+    &lt;button onclick="window.print()"&gt;ushbu sahifani chop qilish&lt;/button&gt;
+    ...
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <button onclick="window.print()">ushbu sahifani chop qilish</button>
+        </article>
+      </section>
+      <section id="tortinchisi">
+        <h1>
+          4-chi dars: <br />
+          O'zgaruvchilar (veriebl)
+        </h1>
+        <p>
+          Siz JavaScript kursining 5-chi darsigacha yetib keldingiz. Ko'pchilik
+          bu yergacha yetib kela olmadi. O'zingiz bilan faxrlaning, lekin
+          bo'shashmang, oldinda xali qiziqarli mavzular bor.
+        </p>
+        <nav>
+          <p>Mundarija:</p>
+          <ul>
+            <li>
+              <a href="#ohzgaruvchiNima">O'zgaruvchi (veriebl) nima o'zi?</a>
+            </li>
+            <li>
+              <a href="#ohzgarmas">O'zgarmas (konstant)</a>
+            </li>
+            <li>
+              <a href="#nomlashQoidalari">O'zgaruvchilarni nomlash qoidalari</a>
+            </li>
+          </ul>
+        </nav>
+        <hr />
+        <article id="ohzgaruvchiNima">
+          <h3>O'zgaruvchi (veriebl) nima o'zi?</h3>
+          <p>
+            O'zgaruvchilar ingliz tilida "variable" deyiladi,
+            <i>veriebl deb o'qiladi</i> Ushbu kursda biz bazan "o'zgaruvchi"
+            bazan "veriebl" deb ataymiz. Ikkalasi bir narsa. Dasturlashda
+            ko'pincha o'zgaruvchan qiymatlarga duch kelamiz. Masalan bank hisob
+            raqami balansi, yoki kimningdur yoshi o'zgaruvchan bo'lishi mumkin.
+            Veriebl o'zgaruvchi ko'rsatgichlarni saqlash uchun bir katak
+            vazafisini bajaradi. Dasturlashda o'zgaruvchi yaratish uchun
+            <code>let</code> kalit so'zidan foydalanish mumkin. Masalan:
+          </p>
+          <pre>
+  <code>
+    let foydalanuvchiBalansi = 10000;
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            O'zgaruvchilarga faqat raqam emas matn ham belgilash mumkin.
+            Masalan:
+          </p>
+          <pre>
+  <code>
+    let foydalanuvchiBalansi = 10000;
+    let foydalanuvchiIsmi = "Azamat";
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            O'zgaruvchiga matn belgilaganda qo'shtirnoq ("") yoki yakkatirnoq
+            ('') qo'yish shart.
+          </p>
+          <p>
+            Agar lozim bo'lsa o'zgaruvchilarni ko'rsatgich bermasdan ham yasab
+            ularga ko'rsatgich keyinchalik berish mumkin. Masalan:
+          </p>
+          <pre>
+  <code>
+    let x; //"x" nomli o'zgaruvchi yaratildi.
+    let y; //"y" nomli o'zgaruvchi yaratildi.
+    let a; //"a" nomli o'zgaruvchi yaratildi.
+    x = 15; //"x" nomli o'zgaruvchi 15 deb belgilandi.
+    a = 25; //"a" nomli o'zgaruvchi 25 deb belgilandi.tortinchisi1
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>tenglik belgisi (=) tayinlovchi amal (operator) hisoblanadi.</p>
+          <p>
+            Agar o'zgaruvchini konsolga chiqarmoqchi bo'lsangiz faqat uni nomini
+            yozish kifoya. Masalan:
+          </p>
+          <pre>
+  <code>
+    let x;
+    let y;
+    let a;
+    x = 15;
+    a = 25;
+    console.log(a)
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <script>
+            let x;
+            let y;
+            let a;
+            x = 15;
+            a = 25;
+            console.log(a);
+          </script>
+          <p>
+            O'zgaruvchilarni yo'l-yo'lakay o'zgartirib borish mumkin. Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;script&gt;
+      let foydalanuvchiYoshi = 14;
+      /* bir yil o'tdi */
+      foydalanuvchiYoshi = 15;
+    &lt;/script&gt;
+    &lt;button onclick = "alert(foydalanuvchiYoshi)"&gt;
+      Meni bos!
+    &lt;/button"&gt;
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <script>
+            let foydalanuvchiYoshi = 14;
+            /*bir yil o'tdi */
+            foydalanuvchiYoshi = 15;
+          </script>
+          <button onclick="alert(foydalanuvchiYoshi)">Meni bos!</button>
+          <p>O'zgaruvchilarni istalgancha o'zgartirish mumkin.</p>
+          <p>
+            JavaScriptnining eski versiyalarida (1995 yildan to 2015
+            gacha).o'zgaruvchilarni
+            <code>var</code> kalit so'zi bilan yaratishgan:
+          </p>
+          <pre>
+  <code>
+    var meva = "olma";
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            Agar vebsahifangiz eski brauzerlarda ham ishlashi shart bo'lsa unda
+            <code>var</code> kalit so'zidan foydalaning. <code>var</code> kalit
+            so'zidan JavaScriptnining oxirgi versiyalarida ham foydalanish
+            mumkin, lekin maslahat berilmaydi. <code>let</code> kalit so'zi
+            JavaScriptga 2015 yilda kiritilgan va bugungi kunda
+            <code>var</code> kalit so'zini o'rnini egallagan. Chunki
+            <code>var</code> kalit so'zining o'ziga yarasha kamchiliklari bor
+            lekin hozircha bunga chuqurlashmaymiz.
+          </p>
+        </article>
+        <hr />
+        <article id="ohzgarmas">
+          <h3>Ohzgarmas</h3>
+          <p>
+            Ba'zida o'zgaruvchiga belgilangan ko'rsatgichni o'zgarmas qilib
+            tayinlashga to'g'ri keladi. Masalan sizning yoshingiz doimo
+            o'zgaradi lekin tug'ilgan yilingiz o'zgarmaydi. Bunday xollarda
+            o'zgaruvchi
+            <code>const</code> kalit so'zi bilan konstant (ohzgarmas)
+            o'zgaruvchi yaratiladi. Masalan:
+          </p>
+          <pre>
+  <code>
+    let foydalanuvchiYoshi = 15;
+    const foydalanuvchiTughilganYili = 1999;
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            Konstantlar yaratilganda (elon qilinganda) ko'rsatgich olishi kerak.
+            Agar konstant ko'rsatgichsiz yaratilsa keyinchalik unga ko'rsatgich
+            belgilab bo'lmaydi. Ko'rsatgichli konstantni o'zgartirishga harakat
+            qilsak xatotolik (error) kelib chiqadi. Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;script&gt;
+      const pasportBerilganYili; /*konstant ko'rsatgichsiz yasaldi 
+      const gachaAmalQiladi = 2030; /*konstant ko'rsatgich bilan yasaldi 
+      /* Endi birinchi konstantga ko'rsatgich tayinlaymiz va 
+      ikkinchi konstantni ko'rsatgichini o'zgartiramiz. */
+      pasportBerilganYili = 2020;
+      gachaAmalQiladi = 2040;
+    &lt;/script&gt;
+    &lt;button onclick = "alert(pasportBerilganYili)"&gt;
+      Pasport Berilgan Yili
+    &lt;/button&gt;
+    &lt;button onclick = "alert(gachaAmalQiladi)"&gt;
+      Amal Qilish Muddati
+    &lt;/button&gt;
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <script>
+            const pasportBerilganYili; //konstant ko'rsatgichsiz yasaldi
+            const gachaAmalQiladi = 2030; //konstant ko'rsatgich bilan yasaldi
+            /* Endi birinchi konstantga ko'rsatgich tayinlaymiz va
+            ikkinchi konstantni ko'rsatgichini o'zgartiramiz. */
+            pasportBerilganYili = 2020;
+            gachaAmalQiladi = 2040;
+          </script>
+          <button onclick="alert(pasportBerilganYili)">
+            Pasport Berilgan Yili
+          </button>
+          <button onclick="alert(gachaAmalQiladi)">Amal Qilish Muddati</button>
+          <p>
+            Ushbu tugmalar ishlamaydi, chunki kodda xatolik bor. Ushbu xatolikni
+            ko'rish uchun F12 tugmasini bosib xato tozalagichni (debager) oching
+            va menyudan "console" bosib konsolni oching.
+          </p>
+          <p>Konstantlar (o'zgarmaslar) juda kerakli va foydali hisoblanadi.</p>
+        </article>
+        <hr />
+        <article id="nomlashQoidalari">
+          <h3>O'zgaruvchilarni nomlash qoidalari</h3>
+          <p>JavaScriptda nomlashning quidagi qoidalariga amal qiling!:</p>
+          <ul>
+            <li>
+              O'zgaruvchilar nomlari harflar, pastki chiziq ( _ ) yoki dollar
+              belgisi ($) bilan boshlanishi kerak.
+            </li>
+            <li>O'zgaruvchilar nomalarida bo'shliq qo'llanib bo'lmaydi.</li>
+            <li>
+              O'zgaruvchi nomlari faqat harflar, raqamlar, pastki chiziq va
+              dollar belgisidan tashkil topishi mumkin.
+            </li>
+            <li>
+              O'zgaruvchi nomlarida bosh harf va kichik harf farq qiladi,
+              masalan, foydalanuvchiIsmi va FoydalanuvchiIsmi bir biridan farq
+              qiladi.
+            </li>
+            <li>Ikkita o'zgaruvchilarga bir xil nom berish mumkin emas.</li>
+          </ul>
+        </article>
+        <hr />
+      </section>
+      <section id="beshinchisi">
+        <h1>
+          5-chi dars: <br />
+          Arifmetik amallar (operatorlar)
+        </h1>
+        <p>
+          JavaScriptda arifmetik amallar qo'shuv (+), ayiruv (-), bo'luv (:) va
+          ko'paytiruv va hokazolarga o'xshash bo'ladi.
+        </p>
+        <!--
+        <nav>
+          <p>Amallarning (Operatorlarning) quyidagi turlari mavjud:</p>
+          <ul>
+            <li>
+              <a href="#arifmetikAmallar">Arifmetik amallar (operatorlar)</a>
+            </li>
+            
+            <li>
+              <a href="#innerHTML"
+                >Tayinlovchi amallar (Assignment operatorlar)</a
+              >
+            </li>
+            <li>
+              <a href="#innerHTML"
+                >solishtiruvchi amallar (comparison operatorlar)</a
+              >
+            </li>
+            <li>
+              <a href="#innerHTML">String amallar (String operatorlar)</a>
+            </li>
+            <li>
+              <a href="#innerHTML">Logical amallar (Logical operators)</a>
+            </li> 
+          </ul>
+        </nav>-->
+        <hr />
+        <article id="arifmetikAmallar">
+          <h3>Arifmetik amallar.</h3>
+          <p>
+            Arifmetik amallarni arifmetik operatorlar deb ham atash mumkin.
+            JavaScriptda arifmetik amallarning quyidagi turlari mavjud:
+          </p>
+          <ul>
+            <li>+ qo'shish</li>
+            <li>- ayirish</li>
+            <li>* ko'paytirish</li>
+            <li>** darajaga ko'paytirish</li>
+            <li>/ bo'lish</li>
+            <li>% qoldiq (modulus)</li>
+            <li>++ oshirish</li>
+            <li>-- kamaytirish</li>
+          </ul>
+          <p>Quyidagi misolga qarang:</p>
+          <pre>
+  <code>
+    &lt;button type="button" onclick="alert(25 + 25)"&gt;
+      25+25=? 
+    &lt;/button&gt;
+    &lt;button type="button" onclick="alert(25 - 15)"&gt;
+      25-15=? 
+    &lt;/button&gt;
+    &lt;button type="button" onclick="alert(25 * 4)"&gt;
+      25*4=? 
+    &lt;/button&gt;
+    &lt;button type="button" onclick="alert(5 ** 3)"&gt;
+      5**3=? 
+    &lt;/button&gt;
+    &lt;button type="button" onclick="alert(100 / 5)"&gt;
+      100/5=? 
+    &lt;/button&gt;
+    &lt;button type="button" onclick="alert(10 % 3)"&gt;
+      10%3=? 
+    &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <button type="button" onclick="alert(25 + 25)">25+25=?</button>
+          <button type="button" onclick="alert(25 - 15)">25-15=?</button>
+          <button type="button" onclick="alert(25 * 4)">25*4=?</button>
+          <button type="button" onclick="alert(5 ** 3)">5**3=?</button>
+          <button type="button" onclick="alert(100 / 5)">100/5=?</button>
+          <button type="button" onclick="alert(10 % 3)">100%3=?</button>
+          <p>
+            Yuqoridagi arifmetik amallarning yechimini tugmalarni bosib
+            ogohlantiruvchi oynada ko'rishingiz mumkin.
+          </p>
+          <p>
+            Bitta bayonnomada bir nechta arifmetik amallarni joylashtirish ham
+            mumkin. Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;button type="button" onclick="alert(18 + 2 - 10)"&gt;
+      Bosib ko'r 
+    &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <button type="button" onclick="alert(18 + 2 - 10)">
+            18 + 2 - 10 = ?
+          </button>
+          <p>
+            Bir nechta arifmetik amal birdan qo'yilganda arifmetik qoidaga amal
+            qilinadi. Ya'ni ko'paytiruv va bo'lish avval, qo'shish va ayirish
+            keyin bajariladi. Kerak bo'lganda qavs ham ishlatish mumkin.
+            Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;button type="button" onclick="alert(5 + 2 * 3)"&gt;
+      Bosib ko'r 
+    &lt;/button&gt;
+    &lt;button type="button" onclick="alert((5 + 2 ) * 3)"&gt;
+      Bosib ko'r 
+    &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <button type="button" onclick="alert(5 + 2 * 3)">
+            5 + 2 * 3 = ?
+          </button>
+          <button type="button" onclick="alert((5 + 2 ) * 3)">
+            (5 + 2 ) * 3 = ?
+          </button>
+          <p>
+            Oshirish (++) amalini tushunib olish uchun quyidagi misolga qarang:
+          </p>
+          <pre>
+  <code>
+    &lt;script&gt;
+      let foydalanuvchiToplaganBali = 420;
+      foydalanuvchiToplaganBali ++;
+    &lt;/script&gt;
+    &lt;button type="button" onclick="alert(foydalanuvchiToplaganBali)"&gt;
+      Jami bal
+    &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <script>
+            let foydalanuvchiToplaganBali = 420;
+            foydalanuvchiToplaganBali++;
+          </script>
+          <button type="button" onclick="alert(foydalanuvchiToplaganBali)">
+            Jami bal
+          </button>
+          <p>
+            Agar misolda tushunmagan bo'lsangiz o'zbekcha tushuntiramiz:
+            oshirish (++) amali, mavjud raqamga 1 ni qo'shadi.
+          </p>
+          <p>
+            Quyidagi misolda kamaytirish (--) amalini qanday ishlashini
+            ko'rishimiz mumkin:
+          </p>
+          <pre>
+  <code>
+    &lt;script&gt;
+      let qolganUrinishlarSoni = 4;
+      qolganUrinishlarSoni --;
+    &lt;/script&gt;
+    &lt;button type="button" onclick="alert(qolganUrinishlarSoni)"&gt;
+      Qolgan urinishlar soni
+    &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <script>
+            let qolganUrinishlarSoni = 4;
+            qolganUrinishlarSoni--;
+          </script>
+          <button type="button" onclick="alert(qolganUrinishlarSoni)">
+            Qolgan urinishlar soni
+          </button>
+          <p>Amallarni o'zgaruvchilar bilan ham qo'llash mumkin. Masalan:</p>
+          <pre>
+<code>
+  let olmaNarxi = 500;
+  let xurmoNarxi = 600;
+  let olmaMiqdori = 6;
+  let olmaXaridQilindi = 2;
+  let OlmaTulovUchun = olmaNarxi * xaridqilindi;
+  let mevalarOrtachaNarxi = (olmaNarxi + xurmoNarxi)/2;
+</code>
+</pre>
+        </article>
+        <hr />
+      </section>
+      <section id="oltinchisi">
+        <h1>
+          6-chi dars: <br />
+          Malumot turlari
+        </h1>
+        <p>
+          Ushbu darsda JavaScriptda mavjud bo'lgan malumot turlari haqida
+          gaplashamiz. Biz o'zgaruvchilarga matn va raqam tayinlab ular haqida
+          biroz tushunchaga ega bo'ldik. Endi ma'lumot turlari haqida chuqurroq
+          urganamiz.
+        </p>
+        <nav>
+          <p>Mundarija:</p>
+          <ul>
+            <li>
+              <a href="#stringVaSon">String va sonlar</a>
+            </li>
+            <li>
+              <a href="#boolean">Boolean</a>
+            </li>
+          </ul>
+        </nav>
+        <hr />
+        <article id="stringVaSon">
+          <h3>Malumot turlari: String va sonlar</h3>
+          <p>
+            JavaScriptda matn "string" deb ataladi. <i>string deb o'qiladi</i>.
+            String har doim qo'shtirnoq ("")(yoki yakkatirnoq ('') ) ichida
+            yoziladi. Agar raqam qo'shtirnoq ichida yozilsa u ham string
+            hisoblanadi. Masalan:
+          </p>
+          <pre>
+  <code>
+    let x = "yashashdan maqsad"; //bu string
+    let y = "42"; //bu ham string
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            String ko'rinishidagi raqamlar arifmetik amallari siz kutgan
+            natijasini bermasligi mumkin. Masalan:
+          </p>
+          <pre>
+  <code>
+    &lt;script&gt;
+      let olmasoni = "5";
+      let shaftolisoni = "6";
+      let jami = olmasoni + shaftolisoni;
+    &lt;/script&gt;
+    &lt;button onclick="alert(jami)"&gt;
+      jami
+    &lt;/button&gt;
+  </code><span class="tilNomi">HTML/JS</span>
+  </pre>
+          <script>
+            let olmasoni = "5";
+            let shaftolisoni = "6";
+            let jami = olmasoni + shaftolisoni;
+          </script>
+          <button onclick="alert(jami)">jami</button>
+          <p>
+            Yuqoridagi misolda natija 11 emas, balki 56. Chunki "5" va "6" raqam
+            emas, ular string.
+          </p>
+          <p>
+            Raqamlar butun sonlar yoki o'nli kasr ko'rinishida bo'lishi nmumkin.
+            Masalan:
+          </p>
+          <pre>
+  <code>
+    let MeningBalim = 7;
+    let DostimningBali = 6.5;
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>O'nli kasrlar vergul bilan emas, nuqta (.) bilan yoziladi.</p>
+        </article>
+        <article id="boolean">
+          <h3>Booleanlar</h3>
+          <p>
+            Ba'zidan vebsahifada foydalanuvchi "ha" yoki "yo'q" deb javob
+            berishi kerak bo'ladi. Bunday xollarda va chunga o'xshash xollarda
+            booleanlardan foydalaniladi. Boolean ko'rsatgich ikkita bo'ladi:
+          </p>
+          <dl>
+            <dt>true;</dt>
+            <dd>
+              o'zbek tiliga "to'g'ri" deb tarjima qilinadi
+              <i>tru deb o'qiladi,</i>
+            </dd>
+            <dt>false:</dt>
+            <dd>
+              o'zbek tiliga "noto'gri" yoki "yolg'on" deb tarjima qilinadi.
+              <i>fols deb o'qiladi</i>
+            </dd>
+          </dl>
+          <pre>
+  <code>
+    let htmlniTamomlagan = true;
+    let javaScriptniTamomlagan = false;
+  </code><span class="tilNomi">JS</span>
+  </pre>
+          <p>
+            Raqamlarda ifodalansa <code>true</code> 1 raqamiga,
+            <code>false</code> 0 raqamiga teng bo'ladi. Lekin xozircha bunga
+            chuqurlashmaymiz. Keyingi darslarda bunga yana qaytamiz.
+          </p>
+        </article>
+        <hr />
+      </section>
+    </main>
+    <footer class="footer">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ipsum
+        quia tempore ad nostrum. Obcaecati distinctio qui quos eligendi. Nihil
+        ullam officiis labore libero aliquid cum maiores autem consequuntur
+        facilis!
+      </p>
+    </footer>
+  </body>
+</html>
