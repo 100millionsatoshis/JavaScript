@@ -15,7 +15,7 @@
       href="/MarraUniversity/media/logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="js.css" />
+    <link rel="stylesheet" href="common.css" />
   </head>
   <body>
     <header class="mainMenu">
@@ -28,52 +28,52 @@
         </summary>
         <ol>
           <li>
-            <a href="/MarraUniversity/html/darsining/birinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#birinchisi">
               HTML bilan tanishuv
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/ikkinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#ikkinchisi">
               HTML &lt;head&gt; elementi
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/uchinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#uchinchisi">
               Matnga ishlov berish
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/tortinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#tortinchisi">
               Izoh
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/beshinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#beshinchisi">
               Ro'yxatlar
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/oltinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#oltinchisi">
               Havolalar
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/yettinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#yettinchisi">
               Tasvirlar
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/sakkizinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#sakkizinchisi">
               Semantik teglar
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/toqqizinchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#toqqizinchisi">
               Jadvallar yaratish
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/html/darsining/oninchisi.html">
+            <a href="/MarraUniversity/html/darsining.html#oninchisi">
               Shakllar va kiritishlar
             </a>
           </li>
@@ -169,15 +169,25 @@
               >Malumot turlari
             </a>
           </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#yettinchisi"
+              >if else va switch
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#sakkizinchi"
+              >loop bayonot
+            </a>
+          </li>
         </ol>
       </details>
     </header>
     <main class="main">
       <section id="birinchisi">
-        <h1>
+        <h2>
           1-chi dars: <br />
           JavaScript nimalarga qodir?
-        </h1>
+        </h2>
         <hr />
         <nav>
           <ul>
@@ -439,11 +449,12 @@
           </p>
         </article>
       </section>
+      <hr />
       <section id="ikkinchisi">
-        <h1>
+        <h2>
           2-chi dars: <br />
           Qayerga va qanday?
-        </h1>
+        </h2>
         <hr />
         <nav>
           <ul>
@@ -521,26 +532,26 @@
           </p>
           <p>JavaScriptni HTMLning &lt;body&gt; qismida joylash ham mumkin:</p>
           <pre>
-  <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-      ...
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;p id="misolUchun"&gt; Tugma bosilganda ushbu matn o'zgarib qoladi.&lt;/p&gt;
-      &lt;button type="button" onlick="meningFunksiyam()"&gt;
-          Bosib ko'r 
-      &lt;/button&gt;
-      &lt;script&gt;
-        function meningFunksiyam() {
-          document.getElementById("misolUchun").innerHTML = "yangi matn";
-        }
-      &lt;/script&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    ...
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="misolUchun"&gt; Tugma bosilganda ushbu matn o'zgarib qoladi.&lt;/p&gt;
+    &lt;button type="button" onlick="meningFunksiyam()"&gt;
+        Bosib ko'r 
+    &lt;/button&gt;
+    &lt;script&gt;
+      function meningFunksiyam() {
+        document.getElementById("misolUchun").innerHTML = "yangi matn";
+      }
+    &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <p>
             JavaScript kod HTMLning body qismida joylashtirilganda, uni barcha
             teglardan so'ng, body qismining eng so'ngida joylash maslahat
@@ -586,10 +597,10 @@
             .js fayli manzili bilan nomi yoziladi. Masalan:
           </p>
           <pre>
-  <code>
-    &lt;script src="meningFunksiyam.js"&gt;&lt;/script&gt;
-  </code><span class="tilNomi">HTML</span>
-  </pre>
+<code>
+  &lt;script src="meningFunksiyam.js"&gt;&lt;/script&gt;
+</code><span class="tilNomi">HTML</span>
+</pre>
           <p>
             <code>src</code> hossasiga beriladigan manzil 3 xil bo'lishi mumkin:
           </p>
@@ -629,16 +640,16 @@
             ishlatiladi. Masalan:
           </p>
           <pre>
-  <code>
-    //matnni kattalashtiradi
-    document.getElementbyId('idHossaNommi').style.fontSize='3rem';
-  
-    //Ogohlantiruvchi oynaga xabar chiqarish 
-    alert("Ehtiyot bo'ling");
-  
-    console.log(4+5*3); //arifmetik amallar javobi
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  //matnni kattalashtiradi
+  document.getElementbyId('idHossaNommi').style.fontSize='3rem';
+
+  //Ogohlantiruvchi oynaga xabar chiqarish 
+  alert("Ehtiyot bo'ling");
+
+  console.log(4+5*3); //arifmetik amallar javobi
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             Agar kod nima bajarishini esdan chiqmasin desangiz kod yoniga izoh
             qoldirish mumkin. Agar bitta kod ustida bir necha dasturchi ishlasa,
@@ -651,17 +662,17 @@
             yulduzcha oldinga kesim (*/) ishlatiladi. Maslan:
           </p>
           <pre>
-  <code>
-    //matnni kattalashtiradi
-    document.getElementbyId('idHossaNommi').style.fontSize='3rem';
-  
-    /*Ogohlantiruvchi oynaga xabar chiqarish 
-    alert("Ehtiyot bo'ling");
-  
-    arifmetik amallar javobi
-    console.log(4+5*3) */;
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  //matnni kattalashtiradi
+  document.getElementbyId('idHossaNommi').style.fontSize='3rem';
+
+  /*Ogohlantiruvchi oynaga xabar chiqarish 
+  alert("Ehtiyot bo'ling");
+
+  arifmetik amallar javobi
+  console.log(4+5*3) */;
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             Yuqoridagi misolda JavaScript kodi izohga aylantirilgan. Izohga
             aylantirilgan JavaScript kod ishlamaydi.
@@ -694,22 +705,22 @@
             qo'yiladi. Masalan:
           </p>
           <pre>
-  <code>
-    document.getElementbyId('idHossaNommi').style.fontSize='3rem';
-    alert("Ehtiyot bo'ling");
-    console.log(4+5*3);
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  document.getElementbyId('idHossaNommi').style.fontSize='3rem';
+  alert("Ehtiyot bo'ling");
+  console.log(4+5*3);
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             Nuqta vergul (;) bilan ajratilganda bayonotlarni bir qatorga
             ketma-ket joylashtirish mumkin. Masalan:
           </p>
           <pre>
-  <code>
-    document.getElementbyId('idHossaNommi').style.fontSize='3rem';
-    alert("Ehtiyot bo'ling"); console.log(4+5*3);
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  document.getElementbyId('idHossaNommi').style.fontSize='3rem';
+  alert("Ehtiyot bo'ling"); console.log(4+5*3);
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             Bayonot oxirida nuqta vergul qo'yish maslahat beriladi lekin
             majburiy emas.
@@ -732,13 +743,13 @@
             bir tudaga o'ralgan:
           </p>
           <pre>
-  <code>
-    function meningFunksiyam {
-      alert(99 + 101);
-      console.log('Salom');
-    }
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  function meningFunksiyam {
+    alert(99 + 101);
+    console.log('Salom');
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             <code>function</code> kalit so'zi bilan funksiya yasalganda albatta
             funksiyaga nom berish shart. Yuqoridagi misolda funksiya
@@ -802,11 +813,12 @@
           </p>
         </article>
       </section>
+      <hr />
       <section id="uchinchisi">
-        <h1>
+        <h2>
           3-chi dars: <br />
           JavaScript chiqishi (output)
-        </h1>
+        </h2>
         <nav>
           <p>
             JavaScript kodining natijasi quyidagicha 4 ta ko'rinishda namoyon
@@ -848,19 +860,19 @@
             ma'lumot kiritadi:
           </p>
           <pre>
-  <code>
-      &lt;p&gt; 
-          3 soatda necha minut bor?  
-      &lt;/p&gt; 
-      &lt;p id="misolUchun"&gt;&lt;/p&gt; 
-      &lt;button 
-          type="button" 
-          onclick='document.getElementById("misolUchun").innerHTML = 3 * 60'
-      &gt;
-          Javobni ko'rsat! 
-      &lt;/button&gt;
-  </code><span class="tilNomi">HTML</span>
-  </pre>
+<code>
+    &lt;p&gt; 
+        3 soatda necha minut bor?  
+    &lt;/p&gt; 
+    &lt;p id="misolUchun"&gt;&lt;/p&gt; 
+    &lt;button 
+        type="button" 
+        onclick='document.getElementById("misolUchun").innerHTML = 3 * 60'
+    &gt;
+        Javobni ko'rsat! 
+    &lt;/button&gt;
+</code><span class="tilNomi">HTML</span>
+</pre>
           <p>Quyidagi natijaga ega bo'lamiz:</p>
           <p>3 soatda necha minut bor?</p>
           <p id="innerHTMLBilanMatnKiritish"></p>
@@ -884,19 +896,19 @@
             Quyidagi misolga qarang:
           </p>
           <pre>
-  <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;body&gt;
-      &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
-      &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
-      &lt;script&gt;
-        document.write(5 + 6);
-      &lt;/script&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
+    &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
+    &lt;script&gt;
+      document.write(5 + 6);
+    &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <p>
             JavaScript <code>script</code> teglari orasida joylashgan yuqoridagi
             kod brauzerda quyidagicha ko'rinadi:
@@ -914,19 +926,19 @@
             o'chirib yuboradi. Masalan:
           </p>
           <pre>
-  <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;body&gt;
-      &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
-      &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
-      &lt;button 
-        type="button" onclick="document.write(5+6)"&gt; Tekshirib ko'ring
-      &lt;/button&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
+    &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
+    &lt;button 
+      type="button" onclick="document.write(5+6)"&gt; Tekshirib ko'ring
+    &lt;/button&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <p>
             HTML dokument yaratib ushbu kodni qanday ishlashini o'zingiz
             mustaqil tekshirib ko'ring.
@@ -942,13 +954,13 @@
             <i>alert boks deb o'qiladi</i> Quyidagi misolga qarang:
           </p>
           <pre>
-  <code>
-    ... 
-    &lt;button 
-    type="button" onclick="window.alert(10-2)"&gt;10-2=?&lt;/button&gt;
-    ...
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  ... 
+  &lt;button 
+  type="button" onclick="window.alert(10-2)"&gt;10-2=?&lt;/button&gt;
+  ...
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <p>
             Ogohlantiruvchi oynani (alert box) ko'rish uchun quyidagi tugmani
             bosib ko'ring:
@@ -968,19 +980,19 @@
             <code>console.log()</code> metodidan foydalanish mumkin. Masalan:
           </p>
           <pre>
-  <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;body&gt;
-      &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
-      &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
-      &lt;script&gt;
-        console.log(100 / 4);
-      &lt;/script&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Mening vebsahifam&lt;/h1&gt;
+    &lt;p&gt;Birinchi paragraf.&lt;/p&gt;
+    &lt;script&gt;
+      console.log(100 / 4);
+    &lt;/script&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <script>
             console.log(100 / 4);
             console.log("Hammaga Salom!");
@@ -1007,20 +1019,21 @@
             Masalan:
           </aside>
           <pre>
-  <code>
-    ...
-    &lt;button onclick="window.print()"&gt;ushbu sahifani chop qilish&lt;/button&gt;
-    ...
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  ...
+  &lt;button onclick="window.print()"&gt;ushbu sahifani chop qilish&lt;/button&gt;
+  ...
+</code><span class="tilNomi">JS</span>
+</pre>
           <button onclick="window.print()">ushbu sahifani chop qilish</button>
         </article>
       </section>
+      <hr />
       <section id="tortinchisi">
-        <h1>
+        <h2>
           4-chi dars: <br />
           O'zgaruvchilar (veriebl)
-        </h1>
+        </h2>
         <p>
           Siz JavaScript kursining 5-chi darsigacha yetib keldingiz. Ko'pchilik
           bu yergacha yetib kela olmadi. O'zingiz bilan faxrlaning, lekin
@@ -1054,20 +1067,20 @@
             <code>let</code> kalit so'zidan foydalanish mumkin. Masalan:
           </p>
           <pre>
-  <code>
-    let foydalanuvchiBalansi = 10000;
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  let foydalanuvchiBalansi = 10000;
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             O'zgaruvchilarga faqat raqam emas matn ham belgilash mumkin.
             Masalan:
           </p>
           <pre>
-  <code>
-    let foydalanuvchiBalansi = 10000;
-    let foydalanuvchiIsmi = "Azamat";
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  let foydalanuvchiBalansi = 10000;
+  let foydalanuvchiIsmi = "Azamat";
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             O'zgaruvchiga matn belgilaganda qo'shtirnoq ("") yoki yakkatirnoq
             ('') qo'yish shart.
@@ -1077,29 +1090,29 @@
             ularga ko'rsatgich keyinchalik berish mumkin. Masalan:
           </p>
           <pre>
-  <code>
-    let x; //"x" nomli o'zgaruvchi yaratildi.
-    let y; //"y" nomli o'zgaruvchi yaratildi.
-    let a; //"a" nomli o'zgaruvchi yaratildi.
-    x = 15; //"x" nomli o'zgaruvchi 15 deb belgilandi.
-    a = 25; //"a" nomli o'zgaruvchi 25 deb belgilandi.tortinchisi1
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  let x; //"x" nomli o'zgaruvchi yaratildi.
+  let y; //"y" nomli o'zgaruvchi yaratildi.
+  let a; //"a" nomli o'zgaruvchi yaratildi.
+  x = 15; //"x" nomli o'zgaruvchi 15 deb belgilandi.
+  a = 25; //"a" nomli o'zgaruvchi 25 deb belgilandi.tortinchisi1
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>tenglik belgisi (=) tayinlovchi amal (operator) hisoblanadi.</p>
           <p>
             Agar o'zgaruvchini konsolga chiqarmoqchi bo'lsangiz faqat uni nomini
             yozish kifoya. Masalan:
           </p>
           <pre>
-  <code>
-    let x;
-    let y;
-    let a;
-    x = 15;
-    a = 25;
-    console.log(a)
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  let x;
+  let y;
+  let a;
+  x = 15;
+  a = 25;
+  console.log(a)
+</code><span class="tilNomi">JS</span>
+</pre>
           <script>
             let x;
             let y;
@@ -1112,17 +1125,17 @@
             O'zgaruvchilarni yo'l-yo'lakay o'zgartirib borish mumkin. Masalan:
           </p>
           <pre>
-  <code>
-    &lt;script&gt;
-      let foydalanuvchiYoshi = 14;
-      /* bir yil o'tdi */
-      foydalanuvchiYoshi = 15;
-    &lt;/script&gt;
-    &lt;button onclick = "alert(foydalanuvchiYoshi)"&gt;
-      Meni bos!
-    &lt;/button"&gt;
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  &lt;script&gt;
+    let foydalanuvchiYoshi = 14;
+    /* bir yil o'tdi */
+    foydalanuvchiYoshi = 15;
+  &lt;/script&gt;
+  &lt;button onclick = "alert(foydalanuvchiYoshi)"&gt;
+    Meni bos!
+  &lt;/button"&gt;
+</code><span class="tilNomi">JS</span>
+</pre>
           <script>
             let foydalanuvchiYoshi = 14;
             /*bir yil o'tdi */
@@ -1131,15 +1144,24 @@
           <button onclick="alert(foydalanuvchiYoshi)">Meni bos!</button>
           <p>O'zgaruvchilarni istalgancha o'zgartirish mumkin.</p>
           <p>
+            Vergul bilan ajratgan holda bir qatorda bir nechta o'zgaruchi ham
+            yaratish mumkin. Masalan:
+          </p>
+          <pre>
+<code>
+  let yil = 2023, oy = 10, kun = 20;
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
             JavaScriptnining eski versiyalarida (1995 yildan to 2015
             gacha).o'zgaruvchilarni
             <code>var</code> kalit so'zi bilan yaratishgan:
           </p>
           <pre>
-  <code>
-    var meva = "olma";
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  var meva = "olma";
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             Agar vebsahifangiz eski brauzerlarda ham ishlashi shart bo'lsa unda
             <code>var</code> kalit so'zidan foydalaning. <code>var</code> kalit
@@ -1163,11 +1185,11 @@
             o'zgaruvchi yaratiladi. Masalan:
           </p>
           <pre>
-  <code>
-    let foydalanuvchiYoshi = 15;
-    const foydalanuvchiTughilganYili = 1999;
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  let foydalanuvchiYoshi = 15;
+  const foydalanuvchiTughilganYili = 1999;
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             Konstantlar yaratilganda (elon qilinganda) ko'rsatgich olishi kerak.
             Agar konstant ko'rsatgichsiz yaratilsa keyinchalik unga ko'rsatgich
@@ -1175,23 +1197,23 @@
             qilsak xatotolik (error) kelib chiqadi. Masalan:
           </p>
           <pre>
-  <code>
-    &lt;script&gt;
-      const pasportBerilganYili; /*konstant ko'rsatgichsiz yasaldi 
-      const gachaAmalQiladi = 2030; /*konstant ko'rsatgich bilan yasaldi 
-      /* Endi birinchi konstantga ko'rsatgich tayinlaymiz va 
-      ikkinchi konstantni ko'rsatgichini o'zgartiramiz. */
-      pasportBerilganYili = 2020;
-      gachaAmalQiladi = 2040;
-    &lt;/script&gt;
-    &lt;button onclick = "alert(pasportBerilganYili)"&gt;
-      Pasport Berilgan Yili
-    &lt;/button&gt;
-    &lt;button onclick = "alert(gachaAmalQiladi)"&gt;
-      Amal Qilish Muddati
-    &lt;/button&gt;
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  &lt;script&gt;
+    const pasportBerilganYili; /*konstant ko'rsatgichsiz yasaldi 
+    const gachaAmalQiladi = 2030; /*konstant ko'rsatgich bilan yasaldi 
+    /* Endi birinchi konstantga ko'rsatgich tayinlaymiz va 
+    ikkinchi konstantni ko'rsatgichini o'zgartiramiz. */
+    pasportBerilganYili = 2020;
+    gachaAmalQiladi = 2040;
+  &lt;/script&gt;
+  &lt;button onclick = "alert(pasportBerilganYili)"&gt;
+    Pasport Berilgan Yili
+  &lt;/button&gt;
+  &lt;button onclick = "alert(gachaAmalQiladi)"&gt;
+    Amal Qilish Muddati
+  &lt;/button&gt;
+</code><span class="tilNomi">JS</span>
+</pre>
           <script>
             const pasportBerilganYili; //konstant ko'rsatgichsiz yasaldi
             const gachaAmalQiladi = 2030; //konstant ko'rsatgich bilan yasaldi
@@ -1235,41 +1257,43 @@
         </article>
         <hr />
       </section>
+      <hr />
       <section id="beshinchisi">
-        <h1>
+        <h2>
           5-chi dars: <br />
-          Arifmetik amallar (operatorlar)
-        </h1>
+          Amallar (operatorlar)
+        </h2>
         <p>
           JavaScriptda arifmetik amallar qo'shuv (+), ayiruv (-), bo'luv (:) va
-          ko'paytiruv va hokazolarga o'xshash bo'ladi.
+          ko'paytiruv va hokazolarga o'xshash bo'ladi. Tayinlov amal esa tenglik
+          belgisi (=) bilan yoziladi.
         </p>
-        <!--
         <nav>
           <p>Amallarning (Operatorlarning) quyidagi turlari mavjud:</p>
           <ul>
             <li>
               <a href="#arifmetikAmallar">Arifmetik amallar (operatorlar)</a>
             </li>
-            
             <li>
-              <a href="#innerHTML"
+              <a href="#tayinlovchiAmallar"
                 >Tayinlovchi amallar (Assignment operatorlar)</a
               >
             </li>
             <li>
-              <a href="#innerHTML"
+              <a href="#comparison"
                 >solishtiruvchi amallar (comparison operatorlar)</a
               >
             </li>
+          </ul>
+        </nav>
+        <!--
             <li>
               <a href="#innerHTML">String amallar (String operatorlar)</a>
             </li>
             <li>
               <a href="#innerHTML">Logical amallar (Logical operators)</a>
             </li> 
-          </ul>
-        </nav>-->
+          </ul>-->
         <hr />
         <article id="arifmetikAmallar">
           <h3>Arifmetik amallar.</h3>
@@ -1289,27 +1313,27 @@
           </ul>
           <p>Quyidagi misolga qarang:</p>
           <pre>
-  <code>
-    &lt;button type="button" onclick="alert(25 + 25)"&gt;
-      25+25=? 
-    &lt;/button&gt;
-    &lt;button type="button" onclick="alert(25 - 15)"&gt;
-      25-15=? 
-    &lt;/button&gt;
-    &lt;button type="button" onclick="alert(25 * 4)"&gt;
-      25*4=? 
-    &lt;/button&gt;
-    &lt;button type="button" onclick="alert(5 ** 3)"&gt;
-      5**3=? 
-    &lt;/button&gt;
-    &lt;button type="button" onclick="alert(100 / 5)"&gt;
-      100/5=? 
-    &lt;/button&gt;
-    &lt;button type="button" onclick="alert(10 % 3)"&gt;
-      10%3=? 
-    &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;button type="button" onclick="alert(25 + 25)"&gt;
+    25+25=? 
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(25 - 15)"&gt;
+    25-15=? 
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(25 * 4)"&gt;
+    25*4=? 
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(5 ** 3)"&gt;
+    5**3=? 
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(100 / 5)"&gt;
+    100/5=? 
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(10 % 3)"&gt;
+    10%3=? 
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <button type="button" onclick="alert(25 + 25)">25+25=?</button>
           <button type="button" onclick="alert(25 - 15)">25-15=?</button>
           <button type="button" onclick="alert(25 * 4)">25*4=?</button>
@@ -1325,12 +1349,12 @@
             mumkin. Masalan:
           </p>
           <pre>
-  <code>
-    &lt;button type="button" onclick="alert(18 + 2 - 10)"&gt;
-      Bosib ko'r 
-    &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;button type="button" onclick="alert(18 + 2 - 10)"&gt;
+    Bosib ko'r 
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <button type="button" onclick="alert(18 + 2 - 10)">
             18 + 2 - 10 = ?
           </button>
@@ -1341,35 +1365,71 @@
             Masalan:
           </p>
           <pre>
-  <code>
-    &lt;button type="button" onclick="alert(5 + 2 * 3)"&gt;
-      Bosib ko'r 
-    &lt;/button&gt;
-    &lt;button type="button" onclick="alert((5 + 2 ) * 3)"&gt;
-      Bosib ko'r 
-    &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;button type="button" onclick="alert(5 + 2 * 3)"&gt;
+    Bosib ko'r 
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert((5 + 2 ) * 3)"&gt;
+    Bosib ko'r 
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <button type="button" onclick="alert(5 + 2 * 3)">
             5 + 2 * 3 = ?
           </button>
           <button type="button" onclick="alert((5 + 2 ) * 3)">
             (5 + 2 ) * 3 = ?
           </button>
+
+          <p>Amallarni o'zgaruvchilar bilan ham qo'llash mumkin. Masalan:</p>
+          <pre>
+<code>
+  &lt;script&gt;
+    let olmaNarxi = 500;
+    let xurmoNarxi = 600;
+    let olmaMiqdori = 6;
+    let olmaXaridQilindi = 2;
+    let OlmaTulovUchun = olmaNarxi * xaridqilindi;
+    let mevalarOrtachaNarxi = (olmaNarxi + xurmoNarxi) / 2;
+  &lt;/script&gt;
+  &lt;button type="button" onclick="alert(olmaTulovUchun)"&gt;
+    Olma uchun qancha berish kerak?
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(mevalarOrtachaNarxi)"&gt;
+    Olma va xurmo o'rtacha narxi
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <script>
+            let olmaNarxi = 500;
+            let xurmoNarxi = 600;
+            let olmaMiqdori = 6;
+            let olmaXaridQilindi = 2;
+            let olmaTulovUchun = olmaNarxi * olmaXaridQilindi;
+            let mevalarOrtachaNarxi = (olmaNarxi + xurmoNarxi) / 2;
+          </script>
+          <button type="button" onclick="alert(olmaTulovUchun)">
+            Olma uchun qancha berish kerak?
+          </button>
+          <button type="button" onclick="alert(mevalarOrtachaNarxi)">
+            Olma va xurmo o'rtacha narxi
+          </button>
           <p>
-            Oshirish (++) amalini tushunib olish uchun quyidagi misolga qarang:
+            Oshirish (++) va kamaytirish (--) amalini faqat o'zgaruvchilarga
+            qo'llash mumkin. Oshirish (++) amalini tushunib olish uchun quyidagi
+            misolga qarang:
           </p>
           <pre>
-  <code>
-    &lt;script&gt;
-      let foydalanuvchiToplaganBali = 420;
-      foydalanuvchiToplaganBali ++;
-    &lt;/script&gt;
-    &lt;button type="button" onclick="alert(foydalanuvchiToplaganBali)"&gt;
-      Jami bal
-    &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+&lt;script&gt;
+  let foydalanuvchiToplaganBali = 420;
+  foydalanuvchiToplaganBali ++;
+&lt;/script&gt;
+&lt;button type="button" onclick="alert(foydalanuvchiToplaganBali)"&gt;
+  Jami bal
+&lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <script>
             let foydalanuvchiToplaganBali = 420;
             foydalanuvchiToplaganBali++;
@@ -1386,16 +1446,16 @@
             ko'rishimiz mumkin:
           </p>
           <pre>
-  <code>
-    &lt;script&gt;
-      let qolganUrinishlarSoni = 4;
-      qolganUrinishlarSoni --;
-    &lt;/script&gt;
-    &lt;button type="button" onclick="alert(qolganUrinishlarSoni)"&gt;
-      Qolgan urinishlar soni
-    &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+&lt;script&gt;
+  let qolganUrinishlarSoni = 4;
+  qolganUrinishlarSoni --;
+&lt;/script&gt;
+&lt;button type="button" onclick="alert(qolganUrinishlarSoni)"&gt;
+  Qolgan urinishlar soni
+&lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <script>
             let qolganUrinishlarSoni = 4;
             qolganUrinishlarSoni--;
@@ -1403,30 +1463,200 @@
           <button type="button" onclick="alert(qolganUrinishlarSoni)">
             Qolgan urinishlar soni
           </button>
-          <p>Amallarni o'zgaruvchilar bilan ham qo'llash mumkin. Masalan:</p>
+          <p>
+            Oshirish (++) va kamaytirish amallarini ham o'zgaruvchi (veriebl)
+            oldidan ham orqasida qo'llash mumkin. Natija bir-biridan farq
+            qiladi. Masalan:
+          </p>
           <pre>
 <code>
-  let olmaNarxi = 500;
-  let xurmoNarxi = 600;
-  let olmaMiqdori = 6;
-  let olmaXaridQilindi = 2;
-  let OlmaTulovUchun = olmaNarxi * xaridqilindi;
-  let mevalarOrtachaNarxi = (olmaNarxi + xurmoNarxi)/2;
-</code>
+&lt;script&gt;
+  let baho = 4;
+  let davomat = 98;
+&lt;/script&gt;
+&lt;button type="button" onclick="alert(baho++)"&gt;
+  baho++
+&lt;/button&gt;
+&lt;button type="button" onclick="alert(++davomat)"&gt;
+  ++davomat
+&lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <script>
+            let baho = 4;
+            let davomat = 98;
+          </script>
+          <button type="button" onclick="alert(baho++)">baho++</button>
+          <button type="button" onclick="alert(++davomat)">++davomat</button>
+          <p>
+            Agar oshiruvchi amal o'zgaruvchidan keyin qo'yilsa avval displayga
+            chiqarilib keyin unga bir qo'shiladi. Yanada tushunarliroq bo'lishi
+            uchun quyidagi misolga qaraymiz:
+          </p>
+          <pre>
+<code>
+  &lt;script&gt;
+    let m = 4;
+  &lt;/script&gt;
+  &lt;button type="button" onclick="alert(m++)"&gt;
+    m++
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(m++)"&gt;
+    m++
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <script>
+            let m = 4;
+          </script>
+          <button type="button" onclick="alert(m++)">m++</button>
+          <button type="button" onclick="alert(m++)">m++</button>
+          <p>
+            Birinchi tugmani bosganda "m" o'zgaruvchisining o'zi o'zgarmasdan
+            ekranga chiqadi va unga 1 qo'shiladi. 2-chi tugma bosilganda "m"
+            ning 1 qo'shilgan yangi ko'rsatgichi ekranga chiqadi va unga yana 1
+            qo'shiladi.
+          </p>
+        </article>
+        <hr />
+        <article id="tayinlovchiAmallar">
+          <h3>Tayinlovchi amallar (Assignment operators)</h3>
+          <p>
+            JavaScriptda tenglik belgisi (=) tayinlovchi amal hisoblanadi.
+            Ingliz tilida Assignment operator deyiladi,
+            <i>esaynment opereytua beb o'qiladi</i> Tenglikdan (=) boshqa
+            tayinlovchi operatorlar (amallar) ham mavjud. Ular quyidagilar:
+          </p>
+          <table class="jadval">
+            <tr>
+              <th>Amal</th>
+              <th>Amalga misol</th>
+              <th>Tushuntirish</th>
+            </tr>
+            <tr>
+              <td>=</td>
+              <td>let a = 5;</td>
+              <td>a ni 5 ekanligini tayinlaydi. a ni 5 deb e'lon qiladi.</td>
+            </tr>
+            <tr>
+              <td>+=</td>
+              <td>x += y</td>
+              <td>
+                qo'shib tayinlovchi amal. Ingliz tilida "addition assignment"
+                operator deyiladi. x = x + y ning qisqacha yozilishi
+              </td>
+            </tr>
+            <tr>
+              <td>-=</td>
+              <td>x -= y</td>
+              <td>x = x - y ning qisqacha yozilishi</td>
+            </tr>
+            <tr>
+              <td>*=</td>
+              <td>x *= y</td>
+              <td>x = x * y ning qisqacha yozilishi</td>
+            </tr>
+            <tr>
+              <td>/=</td>
+              <td>x /= y</td>
+              <td>x = x / y ning qisqacha yozilishi</td>
+            </tr>
+            <tr>
+              <td>%=</td>
+              <td>x %= y</td>
+              <td>x = x % y ning qisqacha yozilishi</td>
+            </tr>
+            <tr>
+              <td>**=</td>
+              <td>x **= y</td>
+              <td>x = x ** y ning qisqacha yozilishi</td>
+            </tr>
+          </table>
+          <p>
+            Tayinlovchi operatorlarni o'zgaruvchilar bilan ham qo'llash mumkin.
+            Masalan:
+          </p>
+          <pre>
+<code>
+  let balandlik = 2400;
+  let kotarilish = 100;
+  balandlik += kotarilish;
+</code><span class="tilNomi">JS</span>
 </pre>
         </article>
         <hr />
+        <article id="comparison">
+          <h3>Solishtiruvchi amallar</h3>
+          <p>
+            Solishtiruvchi amallar ingliz tilida comparison operator deyiladi.
+            <i>(komparison opereytua deb o'qiladi)</i> Solishtiruvchi amallar
+            quyidagilardan iborat:
+          </p>
+          <table class="jadval">
+            <tr>
+              <th>Amal</th>
+              <th>Tushuntirish</th>
+            </tr>
+            <tr>
+              <td>==</td>
+              <td>ga teng</td>
+            </tr>
+            <tr>
+              <td>===</td>
+              <td>ko'rsatgichi ham ma'lumot turi ham bir xil</td>
+            </tr>
+            <tr>
+              <td>!=</td>
+              <td>teng emas</td>
+            </tr>
+            <tr>
+              <td>!==</td>
+              <td>ko'rsatgichi ham ma'lumot turi ham bir xil emas</td>
+            </tr>
+            <tr>
+              <td>&gt;</td>
+              <td>-dan katta (-dan ortiq)</td>
+            </tr>
+            <tr>
+              <td>&lt;</td>
+              <td>-dan kichik</td>
+            </tr>
+            <tr>
+              <td>&gt;=</td>
+              <td>-dan katta yoki teng</td>
+            </tr>
+            <tr>
+              <td>&lt;=</td>
+              <td>-dan kichik yoki teng</td>
+            </tr>
+            <tr>
+              <td>?</td>
+              <td>
+                <a
+                  href="/MarraUniversity/JavaScript/js.html#shartliSolishtiruvchi"
+                  >Shartli operator (uchlamchi amal)</a
+                >
+              </td>
+            </tr>
+          </table>
+          <p>
+            Solishtiruvchi operatorlar (amallarga) keyingi darslarda chuqurroq
+            urganiladi.
+          </p>
+        </article>
       </section>
+      <hr />
       <section id="oltinchisi">
-        <h1>
+        <h2>
           6-chi dars: <br />
           Malumot turlari
-        </h1>
+        </h2>
         <p>
-          Ushbu darsda JavaScriptda mavjud bo'lgan malumot turlari haqida
-          gaplashamiz. Biz o'zgaruvchilarga matn va raqam tayinlab ular haqida
-          biroz tushunchaga ega bo'ldik. Endi ma'lumot turlari haqida chuqurroq
-          urganamiz.
+          JavaScriptnining 6-chi darsigacha yetib keldingiz! Qoyilman! Qaytmas
+          ekansiz. Ushbu darsda JavaScriptda mavjud bo'lgan malumot turlari
+          haqida gaplashamiz. Biz o'zgaruvchilarga matn va raqam tayinlab ular
+          haqida biroz tushunchaga ega bo'ldik. Endi ma'lumot turlari haqida
+          chuqurroq urganamiz.
         </p>
         <nav>
           <p>Mundarija:</p>
@@ -1435,41 +1665,200 @@
               <a href="#stringVaSon">String va sonlar</a>
             </li>
             <li>
-              <a href="#boolean">Boolean</a>
+              <a href="#boolean">Boolean va solishtiruvchi amallar</a>
             </li>
           </ul>
         </nav>
         <hr />
         <article id="stringVaSon">
-          <h3>Malumot turlari: String va sonlar</h3>
+          <h3>String va sonlar</h3>
           <p>
-            JavaScriptda matn "string" deb ataladi. <i>string deb o'qiladi</i>.
+            6-chi darsgacha siz JavaScriptda ekranga yoki konsolga yoki HTML
+            elementi ichiga matn chiqarishni ko'rdik. Bundan tashqari
+            o'zgaruvchiga matn tayinlashni ham urgandik. Ushbu matnlar
+            javaScriptda "string" deb ataladi. <i>string deb o'qiladi</i>.
             String har doim qo'shtirnoq ("")(yoki yakkatirnoq ('') ) ichida
-            yoziladi. Agar raqam qo'shtirnoq ichida yozilsa u ham string
-            hisoblanadi. Masalan:
+            yoziladi. Ba'zan string qo'shtirnoqli matnni o'z ichiga olishi ham
+            mumkin. Quyidagi jadvalga qarang:
           </p>
-          <pre>
-  <code>
-    let x = "yashashdan maqsad"; //bu string
-    let y = "42"; //bu ham string
-  </code><span class="tilNomi">JS</span>
-  </pre>
+          <table class="jadval">
+            <tr>
+              <td>"Salom"</td>
+              <td>String to'g'ri yozilagan.</td>
+            </tr>
+            <tr>
+              <td>'Salom'</td>
+              <td>String to'g'ri yozilagan.</td>
+            </tr>
+            <tr style="background-color: brown">
+              <td>'Salom"</td>
+              <td>String noto'g'ri yozilagan.</td>
+            </tr>
+            <tr style="background-color: brown">
+              <td>"Salom'</td>
+              <td>String noto'g'ri yozilagan.</td>
+            </tr>
+            <tr>
+              <td>"'Salom' degan tillaringdan buving o'rgilsin"</td>
+              <td>String to'g'ri yozilagan.</td>
+            </tr>
+            <tr>
+              <td>'U menga, "salom" dedi'</td>
+              <td>String to'g'ri yozilagan.</td>
+            </tr>
+            <tr>
+              <td>"O'zbekiston"</td>
+              <td>String to'g'ri yozilagan.</td>
+            </tr>
+          </table>
           <p>
-            String ko'rinishidagi raqamlar arifmetik amallari siz kutgan
-            natijasini bermasligi mumkin. Masalan:
+            Yuqorida jadvaldan xulosa qilish mumkinki, agar string ichida
+            qo'shtirnoq kerak bo'lsa stringni yakkatirnoq bilan o'rash mumkin.
+            Agar string ichida yakkatirnoq ishlatish kerak bo'lsa unda stringni
+            qo'shtirnoq bilan o'rash mumkin. Ba'zi holarda stringda ham
+            qo'shtirnoq, ham yakkatirnoq yozishga to'g'ri keladi. Bunday
+            xollarda orqaga kesim belgisidan (\) foydalaniladi. Bu belgi ingliz
+            tilida "escape" deyiladi. <i>(eskeyp deb o'qiladi)</i> Masalan:
           </p>
           <pre>
-  <code>
-    &lt;script&gt;
-      let olmasoni = "5";
-      let shaftolisoni = "6";
-      let jami = olmasoni + shaftolisoni;
-    &lt;/script&gt;
-    &lt;button onclick="alert(jami)"&gt;
-      jami
-    &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  let xabar = 'o'glim "salom" dedi' // noto'gri 
+  let xabar = 'o\'glim "salom" dedi' // to'gri yozilgan
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Orqaga kesim belgisini (\) bo'lish belgisi (/) bilan adashtirib
+            yubormang. Matnni yangi qatorga o'tkazish uchun \n belgisidan
+            foydalaniladi. Masalan:
+          </p>
+          <pre>
+<code>
+  &lt;script&gt;
+    let kitobNomi = "U\nkim\nbu\nnima?"
+  &lt;/script&gt;
+  &lt;button type="button" onclick="alert(kitobNomi)"&gt;
+    Kitob nomi
+  &lt;/button&gt;
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let kitobNomi = "U\nkim\nbu\nnima?";
+          </script>
+          <button type="button" onclick="alert(kitobNomi)">Kitob nomi</button>
+          <p>
+            orqakesim belgisi (\) va t harfi yordamida tab bo'shlig'i yaratish
+            mumkin.
+          </p>
+          <p>
+            Yuqoridagilardan tashqari orqaga qaragan qo'shtirnoq (``) yordamida
+            ham string yaratish mumkin. Bu ingliz tilida "template literal"
+            deyiladi.
+            <i>(templeyt litirel deb o'qiladi)</i> Template literal yordamida
+            ham qo'shtirnoq ham yakkatirnoqdan tashkil topgan string yaratish
+            mumkin. Masalan:
+          </p>
+          <pre>
+<code>
+  let sms = `Yangi "olg'a" tarifiga ulaning!`
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Template literal (orqaga qaragan yakkatirnoq) \n dan foydalanmasdan
+            matnni yangi qatorga o'tkazish imkoniyatini ham beradi. Masalan:
+          </p>
+          <pre>
+<code>
+  &lt;script&gt;
+    let ogohlantirish = `Yangi
+    "olg'a"
+    tarifi
+    yoqildi`
+  &lt;/script&gt;
+  &lt;button type="button" onclick="alert(ogohlantirish)"&gt;
+    Tugmacha
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <script>
+            let ogohlantirish = `Yangi
+"olg'a"
+tarifi
+yoqildi`;
+          </script>
+          <button type="button" onclick="alert(ogohlantirish)">Tugmacha</button>
+          <p>
+            Template literalning yana bir ustunlik tarafi shundaki, u string
+            orasiga veriebl (o'zgaruvchi) joylash imkonini beradi. Masalan:
+          </p>
+          <pre>
+<code>
+  &lt;script&gt;
+    let qurilganQavatlarSoni = 10;
+  &lt;/script&gt;
+  &lt;button type="button" onclick="alert(`Shu kungacha 
+  binomizning ${qurilganQavatlarSoni} qavati qurilib bitkazildi.`) "&gt;
+    Nechinchi qavat qurilyapti?
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <script>
+            let qurilganQavatlarSoni = 10;
+          </script>
+          <button
+            type="button"
+            onclick="alert(`Shu kungacha binomizning ${qurilganQavatlarSoni} qavati qurilib bitkazildi.`) "
+          >
+            Nechinchi qavat qurilyapti?
+          </button>
+          <p>
+            Tugma bosilganda ogohlantiruvchi oynada quyidagi matn ko'rsatiladi:
+            <br />Shu kungacha binomizning 10 qavati qurilib bitkazildi.
+          </p>
+          <p>
+            Ko'pchilik template literalsni qulayligi uchun sevib qolishgan, deb
+            eshitganmiz.
+          </p>
+          <h3>Birlashtirish (Concatenation)</h3>
+          <p>
+            Ikkita stringni bir-biriga qo'shish operatori (+) yordamida
+            birlashtirish mumkin. Masalan:
+          </p>
+          <pre>
+<code>
+  &lt;button type="button" onclick="alert(`muz` + `qaymoq`) "&gt;
+    Birlashtir!
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <button type="button" onclick="alert(`muz` + `qaymoq`) ">
+            Birlashtir!
+          </button>
+          <p>
+            Agar raqam qo'shtirnoq ichida yozilsa u ham string hisoblanadi.
+            Masalan:
+          </p>
+          <pre>
+<code>
+  let x = "yashashdan maqsad"; //bu string
+  let y = "42"; //bu ham string
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            String turidagi sonlar arifmetik amallari siz kutgan natijasini
+            bermasligi mumkin. Masalan:
+          </p>
+          <pre>
+<code>
+  &lt;script&gt;
+    let olmasoni = "5";
+    let shaftolisoni = "6";
+    let jami = olmasoni + shaftolisoni;
+  &lt;/script&gt;
+  &lt;button onclick="alert(jami)"&gt;
+    jami
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <script>
             let olmasoni = "5";
             let shaftolisoni = "6";
@@ -1485,45 +1874,680 @@
             Masalan:
           </p>
           <pre>
-  <code>
-    let MeningBalim = 7;
-    let DostimningBali = 6.5;
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  let MeningBalim = 7;
+  let DostimningBali = 6.5;
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>O'nli kasrlar vergul bilan emas, nuqta (.) bilan yoziladi.</p>
         </article>
+        <hr />
         <article id="boolean">
-          <h3>Booleanlar</h3>
+          <h3>Boolean va solishtiruvchi operatorlar (amallar)</h3>
           <p>
             Ba'zidan vebsahifada foydalanuvchi "ha" yoki "yo'q" deb javob
-            berishi kerak bo'ladi. Bunday xollarda va chunga o'xshash xollarda
+            berishi kerak bo'ladi. Bunday xollarda va shunga o'xshash xollarda
             booleanlardan foydalaniladi. Boolean ko'rsatgich ikkita bo'ladi:
           </p>
           <dl>
             <dt>true;</dt>
             <dd>
-              o'zbek tiliga "to'g'ri" deb tarjima qilinadi
+              o'zbek tiliga "to'g'ri" deb tarjima qilinadi,
               <i>tru deb o'qiladi,</i>
             </dd>
             <dt>false:</dt>
             <dd>
-              o'zbek tiliga "noto'gri" yoki "yolg'on" deb tarjima qilinadi.
+              o'zbek tiliga "noto'gri" yoki "yolg'on" deb tarjima qilinadi,
               <i>fols deb o'qiladi</i>
             </dd>
           </dl>
           <pre>
-  <code>
-    let htmlniTamomlagan = true;
-    let javaScriptniTamomlagan = false;
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  let htmlniTamomlagan = true;
+  let javaScriptniTamomlagan = false;
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
-            Raqamlarda ifodalansa <code>true</code> 1 raqamiga,
-            <code>false</code> 0 raqamiga teng bo'ladi. Lekin xozircha bunga
-            chuqurlashmaymiz. Keyingi darslarda bunga yana qaytamiz.
+            Ikkita raqamni solishtirganda natija boolean ko'rinishida bo'ladi.
+            Masalan:
           </p>
+          <pre>
+<code>
+  &lt;button type="button" onclick="alert(2&gt;3)"&gt;
+    Ikki uchdan katta
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(3&gt;2)"&gt;
+    Uch ikkidan katta
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <button type="button" onclick="alert(2>3)">Ikki uchdan katta</button>
+          <button type="button" onclick="alert(3>2)">Uch ikkidan katta</button>
+          <p>
+            "Ikki uchdan katta" tugmasi bosilganda "false" ekranga natija
+            chiqadi, "Uch ikkidan katta" tugmasi bosilganda esa "true" ekranga
+            chiqadi. Quyidagi misola boshqa solishturuvchi amallarga misol
+            keltirilgan:
+          </p>
+          <pre>
+<code>
+  &lt;script&gt;
+    let q = 5;
+  &lt;/script&gt;
+  &lt;button type="button" onclick="alert(q&lt;3)"&gt;
+    q 3 dan kichik
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(q&lt;=5)"&gt;
+    q 5 dan kichik yoki teng
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(q==5)"&gt;
+    q 5 ga teng
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(q=='5')"&gt;
+    q '5' ga teng
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(q==='5')"&gt;
+    q '5' ga teng (ham qiymati ham ma'lumot turi)
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert(q!=='5')"&gt;
+    q '5' ga teng emas (na qiymati na ma'lumot turi)
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <script>
+            let q = 5;
+          </script>
+          <p>
+            Agar q 5 dan kichik bo'lsa to'g'ri aks holda noto'gri javobi
+            chiqadi.
+          </p>
+          <button type="button" onclick="alert(q < 3)">q 3 dan kichik</button>
+
+          <p>
+            Agar q 5 ga teng yoki kichik bo'lsa to'g'ri aks holda noto'gri
+            javobi chiqadi.
+          </p>
+          <button type="button" onclick="alert(q <= 5)">
+            q 5 dan kichik yoki teng
+          </button>
+
+          <p>
+            Agar q 5 ga teng bo'lsa to'g'ri aks holda noto'gri javobi chiqadi.
+          </p>
+          <button type="button" onclick="alert(q==5)">q 5 ga teng</button>
+
+          <p>
+            Agar q "5" ga teng bo'lsa to'g'ri aks holda noto'gri javobi chiqadi.
+          </p>
+          <button type="button" onclick="alert(q=='5')">q "5" ga teng</button>
+
+          <p>
+            ham qiymati ham turiga ko'ra teng bo'lsa to'g'ri aks holda noto'gri
+            javobi chiqadi.
+          </p>
+          <button type="button" onclick="alert(q==='5')">
+            ham qiymati ham ma'lumot turiga ko'ra teng
+          </button>
+          <p>
+            na qiymati na turi bo'yicha teng bo'lmasa to'g'ri aks holda noto'gri
+            javobi chiqadi.
+          </p>
+          <button type="button" onclick="alert(q !== '5')">
+            q '5' ga teng emas (na qiymati na ma'lumot turiga ko'ra)
+          </button>
+          <p>
+            Kattaroq (&gt;) va kichikroq (&lt;) solishtiruv amallarini
+            stringlarga ham qo'llash mumkin. Bunda JavaScript ularni alifboda
+            joylashuviga qarab katta kichikligini aniqlaydi. Masalan:
+          </p>
+          <pre>
+<code>
+  &lt;button type="button" onclick="alert('b' &gt; 'a')"&gt;
+    'b' 'a' dan kattaroq
+  &lt;/button&gt;
+  &lt;button type="button" onclick="alert('Bahora' &gt; 'Azamat')"&gt;
+    'Bahora' 'Azamat' dan kattaroq
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
+          <button type="button" onclick="alert('b' > 'a')">
+            'b' 'a' dan kattaroq
+          </button>
+          <button type="button" onclick="alert('Bahora' > 'Azamat')">
+            'Bahora' 'Azamat' dan kattaroq
+          </button>
         </article>
         <hr />
+      </section>
+      <hr />
+      <section id="yettinchisi">
+        <h2>
+          7-chi dars: <br />
+          if else va switch
+        </h2>
+        <nav>
+          <h3>Mundarija:</h3>
+          <ul>
+            <li><a href="#agar">if statement (agar bayonoti)</a></li>
+            <li><a href="#askholda">else statement (aks holda bayonoti)</a></li>
+            <li>
+              <a href="#switch"
+                >switch statement (birma-bir tekshirish bayonoti)</a
+              >
+            </li>
+            <li><a href="#shartliSolishtiruvchi">shartli operator</a></li>
+          </ul>
+        </nav>
+        <article id="agar">
+          <h3>if statement (agar bayonoti)</h3>
+          <p>
+            "if" ingliz tilidan o'zbek tiliga "agar" deb tarjima qilinadi
+            <i>(ef deb o'qiladi)</i>. statement ingliz tilidan bayonot deb
+            tarjima qilinadi. <i>(steytment deb o'qiladi)</i> If statement
+            biron-bir amalni biron-bir shart qondirilganda yani shart to'g'ri
+            bo'lganda amalga oshirish imkonini beradi. if statement quyidagicha
+            yozialdi:
+          </p>
+          <pre>
+<code>
+  if (shart) {
+    //bir to'plam kod
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            If statementga oddiy misol keltiramiz. Masalan, son juft bo'lsa
+            ekranga "juft" degan yozuv chiqishi kerak.
+          </p>
+          <pre>
+<code>
+  let berilganSon = 44;
+  let qoldiq = berilganSon % 2;
+  if (qoldiq == 0) {
+    console.log("Juft")
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let berilganSon = 44;
+            let qoldiq = berilganSon % 2;
+            if (qoldiq == 0) {
+              console.log("Juft!");
+            }
+          </script>
+          <!--
+          <button type="button" onclick="if (qoldiq == 0) {alert('Juft')}">Juftmi?</button> -->
+          <p>
+            Yuqoridagi kod konsolga "Juft" degan yozuv chiqaradi, chunki 44 juft
+            son hisoblanadi (44 ni 2 ga bo'lganda qoldiq qolmaydi) F12 yordamida
+            brauzer konsolini ochib tekshirib ko'ring. Agar shart "true" ga teng
+            bo'lmasa, demak natija "false" ga teng bo'ladi. Masalan 44 o'rnida
+            45 bo'lsa if bayonot amalga oshmaydi. Buni o'zingiz mustaqil sinab
+            ko'ring.
+          </p>
+          <p>
+            if bayonoti yozganda chimchilangan qavs esdan chiqmasligi kerak.
+          </p>
+          <p>
+            Quyida if bayonotga boshqa misol keltiramiz. Masalan foydalanuvchi
+            yoshi 65 dan oshgan bo'lsa konsolga "Nafaqada" degan yozuv
+            chiqaramiz:
+          </p>
+          <pre>
+<code>
+  let foydalanuvchiYoshi = 68;
+  if (foydalanuvchiYoshi > 65) {
+    console.log("Nafaqada")
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            If bayonotga yana bir boshqa misol keltiramiz. Bu misolda template
+            literaldan foydalanib foydalanuvchi nomiga tabrik yo'llaymiz:
+          </p>
+          <pre>
+<code>
+  let foydalanuvchiIsmi = 'Azamat`
+  console.log(`Hurmatli ${foydalanuvchiIsmi}, sizni tabriklaymiz`)
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let foydalanuvchiIsmi = "Azamat";
+            console.log(`Hurmatli ${foydalanuvchiIsmi}, sizni tabriklaymiz`);
+          </script>
+          <p>Konsolga kirib tekshirib ko'ring.</p>
+          <p>
+            if bayonot ichiga boshqa bayonot joylash ham mumkin. Masalan,
+            saylovda davomat 75 va undan baland bo'lsa "Saylov haqiqiy" degan
+            xabarni ekranga chiqaramiz, agar 90 dan baland bo'lsa "davomat
+            yuqori" degan xabarni konsolga chiqaramiz. Quyidagi kodga qarang:
+          </p>
+          <pre>
+<code>
+  let davomat = 95;
+  if (davomat &gt; 75) {
+    console.log('Saylov haqiqiy')
+    if (davomat &gt; 90) {
+      console.log('davomat yuqori')
+    }
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Konsolga kirib ushbu kodning natijasini ko'ring. Masalan, agar
+            davomat = 60 bo'lsa konsolga hech narsa chiqmaydi, agar davomat = 80
+            bo'lsa faqat 'Saylov haqiqiy' degan yozuv chiqadi. Agar davomat = 95
+            bo'lsa ham "Saylov haqiqiy" ham "davomat yuqori" degan yozuvlar
+            konsolda paydo bo'ladi.
+          </p>
+          <script>
+            let davomat1 = 95;
+            if (davomat1 > 75) {
+              console.log("qoniqarli");
+              if (davomat1 > 90) {
+                console.log("yuqori");
+              }
+            }
+          </script>
+        </article>
+        <hr />
+        <article id="aksholda">
+          <h3>else bayonoti</h3>
+          <p>
+            Bundan oldingi darsda biz if bayonot ichiga boshqa if bayonot
+            joylashtirishni urgandik. Bu usulning kamchiligi shundaki ichki if
+            faqat tashqi if bayonotning sharti bajarilganda amalga
+            oshadi.Ko'pincha if statement sharti bajarilmagan xolda (shart false
+            ga teng bo'lganda) qandaydur bayonot amalga oshirishga to'g'ri
+            keladi. Bunda biz else bayonotidan foydalanamiz. "else" ingliz
+            tilidan o'zbek tiliga "ask holda" deb tarjima qilinadi.
+            <i>(els deb o'qiladi)</i> Masalan, imtihonnatijasi 51 baldan yuqori
+            bo'lganda konsolga "imtihondan o'tdingiz" yozuvi chiqaramiz, ask
+            holda "imtihondan yiqildingiz" degan yozuv chiqishi kerak:
+          </p>
+          <pre>
+<code>
+  let imtihonnatijasi = 40;
+  if (imtihonnatijasi > 51) {
+    console.log("Imtihondan o'tdingiz");
+  } else {
+    console.log("imtihondan yiqildingiz");
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let imtihonnatijasi = 40;
+            if (imtihonnatijasi > 51) {
+              console.log("Imtihondan o'tdingiz");
+            } else {
+              console.log("imtihondan yiqildingiz");
+            }
+          </script>
+          <p>
+            else bayonoti faqat if bayonoti sharti 'false' bo'lganda amalga
+            oshadi. else bayonotning o'zining sharti bo'lmaydi, u if bayonotning
+            shartini tekshiradi.
+          </p>
+          <p>
+            Ba'zan bir nechta shartni tekshirishga to'g'ri keladi. Masalan if
+            statement sharti bajarilmaganda else statement joylashtirishdan
+            oldin yana bir shartni tekshirib olish kerak bo'lishi mumkin. Bunday
+            holsa <code>else if</code> bayonoti ishlatiladi.
+          </p>
+          <pre>
+<code>
+  let harorat = -5;
+  if (harorat >= 10) {
+    console.log('Har kungi kiyimda chiqing')
+  } else if (harorat >= -10) {
+    console.log('Qalin kiyinib chiqing')
+  } else {
+    console.log(`Ko'chaga chiqmang`)
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let harorat = -5;
+            if (harorat >= 10) {
+              console.log("Har kungi kiyimda chiqing");
+            } else if (harorat >= -10) {
+              console.log("Qalin kiyinib chiqing");
+            } else {
+              console.log(`Ko'chaga chiqmang`);
+            }
+          </script>
+          <p>
+            Yuqoridagi kod konsolga "Qalin kiyinib chiqing" yozuvi chiqadi.
+            Chunki harorat -5 ga teng, demak birinchi if statement sharti
+            bajarilmaydi "Har kungi kiyimda chiqing" yozuvi konsolga chiqmaydi.
+            Keyin <code>else if</code> ishga tushadi va shartni tekshiradi, -5
+            soni -10 sonidan katta bo'lgani uchun shart bajarailadi (shart
+            'true' ga teng) va konsolga 'Qalin kiyinib chiqing' yozuv konsolga
+            chiqadi.
+          </p>
+          <p>
+            <code>else if</code> bitta emas bir necha marta ishlatish ham
+            mumkin. Masalan:
+          </p>
+          <pre>
+<code>
+  let havo = 'yomgir'
+  if (havo == 'qor') {
+    console.log('Etik kiying')
+  } else if (havo == 'tuman') {
+    console.log('Fonar oling')
+  } else if (havo == 'shamol') {
+    console.log('Sayrga chiqmang')
+  } else if (havo == 'yomgir') {
+    console.log('Soyabon oling')
+  } else {
+    console.log('Kuningiz xayrli bolsin')
+  }
+</code>
+</pre>
+          <script>
+            let havo = "yomgir";
+            if (havo == "qor") {
+              console.log("Etik kiying");
+            } else if (havo == "tuman") {
+              console.log("Fonar oling");
+            } else if (havo == "shamol") {
+              console.log("Sayrga chiqmang");
+            } else if (havo == "yomgir") {
+              console.log("Soyabon oling");
+            } else {
+              console.log("Kuningiz xayrli bolsin");
+            }
+          </script>
+        </article>
+        <hr />
+        <article id="switch">
+          <h3>switch bayonoti</h3>
+          <p>
+            switch bayonotini tushinish uchun bir misol keltiramiz. Sizga
+            bolg'ani topish topshirilgan. Buing uchun qutilarni birma-bir ochib
+            tekshirish kerak. Bolta topilgandan keyin qutilarni ochib tekshirish
+            to'xtatiladi.
+          </p>
+          <pre>
+<code>
+  let topishKerak = "bolta";
+  switch (topishKerak) {
+    case "mix":
+      console.log("Mix topildi");
+      break;
+    case "ombir":
+      console.log("Ombir topildi");
+      break;
+    case "bolta":
+      console.log("Bolta topildi");
+      break;
+    case "qisqich":
+      console.log("Qisqich topildi");
+      break;
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let topishKerak = "bolta";
+            switch (topishKerak) {
+              case "mix":
+                console.log("Mix topildi");
+                break;
+              case "ombir":
+                console.log("Ombir topildi");
+                break;
+              case "bolta":
+                console.log("Bolta topildi"); // topildi!
+                break; //tekshiruvni to'xtat!
+              case "qisqich":
+                console.log("Qisqich topildi");
+                break;
+            }
+          </script>
+          <p>
+            <code>switch</code> bayonoti bazan <code>else if</code> bayonoti
+            o'rnida ishlatilishi mumkin. <code>break</code> kalit so'zi
+            tekshirishni to'xtatish uchun yoziladi. Yuqoridagi misolda bolta
+            topilgandan keyin 'break' kalit so'zi tekshiruvni to'xtatadi va
+            'qisqich' qutisi tekshirilmaydi. Agar kerakli natija topilishiga
+            qaramay barcha qutilar tekshirilishi kerak bo'lganda
+            <code>break</code> kalit so'zi yozilmaydi.
+          </p>
+          <p>
+            Yuqoridagi misolda 'mix', 'ombir', 'bolta' va 'qisqich' so'zlari
+            hech biri mos kelmasa konsolga hech narsa chiqmaydi. Agar hech
+            variant mos kelmaganda konsolga nimadur chiqarish kerak bo'lsa
+            <code>default</code> kalit so'zidan foydalaniladi. Masalan:
+          </p>
+          <pre>
+<code>
+  let tekshirish = "ulchagich";
+  switch (tekshirish) {
+    case "mix":
+      console.log("Mix topildi");
+      break;
+    case "ombir":
+      console.log("Ombir topildi");
+      break;
+    case "bolta":
+      console.log("Bolta topildi");
+      break;
+    case "qisqich":
+      console.log("Qisqich topildi");
+      break;
+    default:
+      console.log("Birbalo topildi");
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let tekshirish = "ulchagich";
+            switch (tekshirish) {
+              case "mix":
+                console.log("Mix topildi");
+                break;
+              case "ombir":
+                console.log("Ombir topildi");
+                break;
+              case "bolta":
+                console.log("Bolta topildi");
+                break;
+              case "qisqich":
+                console.log("Qisqich topildi");
+                break;
+              default:
+                console.log("Birbalo topildi");
+            }
+          </script>
+          <p>konsolni ochib tekshirib ko'ring.</p>
+        </article>
+        <hr />
+        <article id="shartliSolishtiruvchi">
+          <h3>shartli operator</h3>
+          <p>
+            Shartli solishtiruvchi amal o'zgaruvchiga (verieblga) biron bir
+            shart bajarilishiga qarab ko'rsatgich belgilaydi. Quyidagicha
+            yoziladi:
+          </p>
+          <pre>
+<code>
+  ozgaruvchi = (shart) ? korsatgich1: korsatgich2
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Agar shart 'true' bo'lsa korsatgich1, 'false' bo'lsa korsatgich2
+            belgilanadi. Shartli operator qisqaligi sabab tez-tez
+            <code>if else</code> bayonot o'rnida ishlatiladi. Shartli operator
+            uchlamchi operator ham deyiladi. Uchlamchi operatorda tenglik
+            belgisi (=), so'roq belgisi (?), va ikki nuqta (:) ishlatiladi.
+            Quyida uchlamchi amalga misol keltiramiz:
+          </p>
+          <pre>
+<code>
+  let foydalanuvchiYoshi = 66;
+  let foydalanuchiMansubligi = (foydalanuvchiYoshi > 65) ? nafaqali: nafaqasiz;
+  console.log('foydalanuchiMansubligi')
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let foydalanuvchiYoshi1 = 66;
+            let foydalanuchiMansubligi =
+              foydalanuvchiYoshi1 > 65 ? "nafaqali" : "nafaqasiz";
+            console.log(foydalanuchiMansubligi);
+          </script>
+          <p>
+            Quyida foydalanuvchi yoshiga qarab konsolga "Siz o'smir ekansiz"
+            yoki "Siz voyaga yetgansiz" degan xabar chiqaruvchi kodni ham if
+            else korinishida ham uchlamchi amal ko'rinishida yozamiz:
+          </p>
+          <pre>
+<code>
+  // if-else statement yozilishi:
+  let mushtariyYoshi = 18;
+  let javob;
+
+  if (mushtariyYoshi &gt;= 18) {
+    javob = "Siz voyaga yetgansiz";
+  } else {
+    javob = "Siz o'smir ekansiz";
+  }
+
+  console.log(javob);
+
+  // Endi yuqoridagi kodni shartli operator bilan qisqacha yozamiz:
+
+  let mushtariyYoshi2 = 18;
+  let javob2 = age &gt;= 18 ? "Siz voyaga yetgansiz" : "Siz o'smir ekansiz";
+
+  console.log(javob2);
+</code><span class="tilNomi">JS</span>
+</pre>
+        </article>
+      </section>
+      <hr />
+      <section id="sakkizinchi">
+        <h2>
+          8-chi dars: <br />
+          Loop
+        </h2>
+        <nav>
+          <h3>Mindarija:</h3>
+          <ul>
+            <li><a href="#forloop">for loop</a></li>
+            <li><a href="#whileloop">while loop</a></li>
+            <li><a href="#breakAndContinue">Break and continue</a></li>
+          </ul>
+        </nav>
+        <article id="forloop">
+          <h3>for loop</h3>
+          <p>
+            Ba'zan kodni qayta-qayta ishlatishga to'g'ri keladi. Buning uchun
+            JavaScriptda loop ishlatiladi.Loop ingliz tilidan o'zbek tiliga
+            "halqa" deb tarjima qilinadi. <i>lup deb o'qiladi</i>
+          </p>
+          <p>
+            for loop looplarning turlaridan biri hisoblanadi. U quyidagicha
+            yoziladi:
+          </p>
+          <pre>
+<code>
+  for (boshlovchi; shart; oxirgi-ifoda) {
+    // kod
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            boshlovchi (ingliz tilida initializer deyiladi
+            <i>(inishialayze deb o'qiladi)</i>) o'zgaruvhi hisoblanadi uning
+            ko'rsatgichi loop necha marta ishlaganiga qarab o'zgarib boradi.
+            <br />
+            shart (ingliz tilida "condition" deyiladi
+            <i>(kondishn deb o'qiladi)</i>) loop qachon to'xtashi kerakligini
+            belgilaydi. Ya'ni kod qayta-qayta ishashdan to'xtashi shartda
+            belgilanadi. <br />
+            oxirgi-ifoda (ingliz tilida "final expression" deyiladi,
+            <i>faynl ekspreshn deb o'qiladi</i>) har safar kod amalga oshgandan
+            so'ng amalga oshadi. Ko'pincha shart ishlatiladigan o'zgaruvchini
+            ohib borish uchun ishlatiladi. <br />
+            kodni bir marta bajarailishi iteration (itereyshn) deyiladi. Quyida
+            1 dan 10 gacha bo'lgan raqamlarni konsolga chiqarish bilan for loop
+            ga misol keltiramiz:
+          </p>
+          <pre>
+<code>
+  for (let i = 1; i &lt;= 10; i++) {
+    console.log(i);
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            YUqoridagi kodda: 1. i nomli o'zgaruvchi yaratiladi va uning
+            dastlabki ko'rsatgichi 1 qilib belgilanadi. 2. i ning 10 dan
+            kichkina yoki 10 ga tengligi tekshiriladi. 3. console.log i ni
+            konsolga chiqaradi. 4. i++ ishga tushadi ya'ni i = i + 1. 5. i 10
+            dan kichkina yoki teng ekanligi sharti tekshiriladi va hokazo.
+          </p>
+          <p>
+            0 dan 20 gacha bo'lga juft sonlarni konsolga chiqarib for loop ga
+            yana bir misol keltiramiz:
+          </p>
+          <pre>
+<code>
+  for (let i = 0; i &lt;= 20; i += 2) {
+    console.log(i);
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            for (let i = 0; i <= 20; i += 2) {
+              console.log(i);
+            }
+          </script>
+          <p>Konsolni ochib tekshirib ko'ring.</p>
+          <script>
+            let l = 0;
+            for (let i = 0; i < 3; i++) {
+              l += i;
+            }
+            console.log(l);
+          </script>
+          <p>
+            Yana bir misolni ko'ramiz. Masalan sizda 10 ta o'q bor va miltiqdan
+            o'q uzganingizda o'q bittadan kamayib boradi. Qolgan o'qlar sonini
+            ekranga chiqarish uchun quyidagi kodni yozamiz:
+          </p>
+          <pre>
+<code>
+  for (let qolganOqlarSoni = 10; qolganOqlarSoni > 0; qolganOqlarSoni --) {
+    console.log(`${qolganOqlarSoni} ta oqingiz qoldi`)
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            for (
+              let qolganOqlarSoni = 10;
+              qolganOqlarSoni > 0;
+              qolganOqlarSoni--
+            ) {
+              console.log(`${qolganOqlarSoni} ta oqingiz qoldi`);
+            }
+          </script>
+          <p>
+            Yuqoridagi kodning natijasi konsolda taxminan quyidagicha ko'rinadi:
+          </p>
+          <figure>
+            <img
+              src="/MarraUniversity/JavaScript/media/console.png"
+              alt="Brauzer konsolida yuqoridagi kodning natijasi"
+            />
+            <figcaption>Konsolda ko'rinishi</figcaption>
+          </figure>
+        </article>
+        <hr />
+        <article id="whileloop">
+          
+        </article>
       </section>
     </main>
     <footer class="footer">
