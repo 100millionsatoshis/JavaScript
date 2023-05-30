@@ -15,7 +15,7 @@
       href="/MarraUniversity/media/logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="/MarraUniversity/common.css" />
   </head>
   <body>
     <header class="mainMenu">
@@ -85,52 +85,52 @@
         </summary>
         <ol>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/birinchisi.html">
+            <a href="/MarraUniversity/CSS/darsining.html#birinchisi">
               CSS bilan tanishuv
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/ikkinchisi.html">
+            <a href="/MarraUniversity/CSS/darsining.html#ikkinchisi">
               Matnga jilo berish
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/uchinchisi.html">
+            <a href="/MarraUniversity/CSS/darsining.html#uchinchisi">
               Ranglar, orqa fon, ro'yxat, havola va kursor
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/tortinchisi.html">
+            <a href="/MarraUniversity/CSS/darsining.html#tortinchisi">
               Hoshiya, quti modeli va joylashuv
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/beshinchisi.html">
+            <a href="/MarraUniversity/CSS/darsining.html#beshinchisi">
               O'lchov birliklari va box-sizing hususiyati
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/oltinchisi.html">
+            <a href="/MarraUniversity/CSS/darsining.html#oltinchisi">
               Joylashtirish
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/yettinchisi.html"
+            <a href="/MarraUniversity/CSS/darsining.html#yettinchisi"
               >Qo'shma tanlovchilar</a
             >
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/sakkizinchisi.html">
+            <a href="/MarraUniversity/CSS/darsining.html#sakkizinchisi">
               Soxta klas va soxta element tanlovchilari
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/toqqizinchisi.html">
+            <a href="/MarraUniversity/CSS/darsining.html#toqqzinchisi">
               Flexbox
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/CSS/darsining/oninchisi.html"> Grid </a>
+            <a href="/MarraUniversity/CSS/darsining.html#oninchisi"> Grid </a>
           </li>
         </ol>
       </details>
@@ -176,7 +176,12 @@
           </li>
           <li>
             <a href="/MarraUniversity/JavaScript/js.html#sakkizinchi"
-              >loop bayonot
+              >Loop
+            </a>
+          </li>
+          <li>
+            <a href="/MarraUniversity/JavaScript/js.html#toqqizinchi"
+              >Function
             </a>
           </li>
         </ol>
@@ -1215,7 +1220,7 @@
 </code><span class="tilNomi">JS</span>
 </pre>
           <script>
-            const pasportBerilganYili; //konstant ko'rsatgichsiz yasaldi
+            const pasportBerilganYili = ""; //konstant ko'rsatgichsiz yasaldi
             const gachaAmalQiladi = 2030; //konstant ko'rsatgich bilan yasaldi
             /* Endi birinchi konstantga ko'rsatgich tayinlaymiz va
             ikkinchi konstantni ko'rsatgichini o'zgartiramiz. */
@@ -2429,7 +2434,7 @@ yoqildi`;
       <section id="sakkizinchi">
         <h2>
           8-chi dars: <br />
-          Loop
+          Loop (takrorlovchi)
         </h2>
         <nav>
           <h3>Mindarija:</h3>
@@ -2546,7 +2551,292 @@ yoqildi`;
         </article>
         <hr />
         <article id="whileloop">
-          
+          <h3>While loop</h3>
+          <p>while loop quyidagicha yoziladi:</p>
+          <pre>
+<code>
+  while(shart) {
+    //bajarilishi kerak bo'lgan kod
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            while loop shart bajrarilsa (shart "true" ga teng bo'lsa) ishlaydi.
+            Quyidagi misolda 1 dan 10 gacha bo'lga sonlarni konsolga
+            chiqaradigan kod yozamiz:
+          </p>
+          <pre>
+<code>
+  let raqam = 1;
+  while (raqam &lt;= 10) {
+    console.log(raqam);
+    raqam ++;
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            let raqam = 1;
+            while (raqam <= 10) {
+              console.log(raqam);
+              raqam++;
+            }
+          </script>
+          <p>
+            Ushbu kodning natijasini konsolni ochib tekshirib ko'ring. Bundan
+            tashqari 30 dan 20 gacha raqamlarni konsolga chiqaradigan kodni
+            mustaqil yozib, konsolda tekshirib ko'ring.
+          </p>
+          <p>
+            while loop da kod ishlagan sari shart 'false' ga aylanishi kerak,
+            ask holda 'infinite loop' sodir bo'ladi. Ya'ni kod to'xtamasdan
+            ishlaydi, umuman to'xtamaydi. 'infinite loop' ishlaganda ba'zida
+            kompyuter qizib ketadi. 'infinite' ingliz tilidan o'zbek tiliga
+            'cheksiz' deb tarjima qilinadi. Masalan usbu kod cheksiz ishlaydi:
+          </p>
+          <pre>
+<code>
+  let raqam = 1;
+  while (raqam &gt;= 1) {
+    console.log(raqam);
+    raqam ++;
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            'do while loop' takrorlovchilarning yana bir turi. U while loop
+            takrorlovchisiga o'xshaydi ammo 1 ta farqi bor. 'do while loop'
+            takrorlovchisi shartni tekshirishdan oldin kodni bir marta amalga
+            oshirib keyin shartni tekshiradi, agar 'true' bo'lsa keyin kod
+            toplamini takrorlaydi. Shart 'true' bo'lmay qolgandan keyin
+            to'xtaydi. Masalan:
+          </p>
+          <pre>
+<code>
+  let i=5;
+  do {  
+      console.log(i);
+      i++;  
+  }
+  while (i&lt;5);
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Yuqordidagi 'do while loop' konsolga faqat 5 raqamini chiqaradi va
+            to'xtaydi.
+          </p>
+          <p>
+            for takrorlovchi va while takrorlovchi bir-biriga juda o'xshash.
+            'for loop' takrorlanish soni aniq bo'lgan xollarda ishlatiladi.
+            'while loop' esa takrorlanish sharti murakkab bo'lgan xollarda
+            ishlatiladi. Iloji boricha 'for loop' dan foydalanishga harakat
+            qiling chunki u yozishga, o'qishga va tushunishga oson.
+          </p>
+        </article>
+        <hr />
+        <article id="breakAndContinue">
+          <h3>Break and Continue (Uzish va Davom ettirish)</h3>
+          <p>
+            Esingizda bo'lsa <code>switch</code> bayonotini urganganimizda
+            'break' nimaligini urgangan edik. 'break' ingliz tilidan o'zbek
+            tiliga 'uzish' deb tarjima qilinadi.
+            <i>(breik deb o'qiladi)</i> 'break' bayonoti takrorlashni to'xtatish
+            uchun ishlatiladi. Masalan:
+          </p>
+          <pre>
+<code>
+  for(let i=0; i&lt;10;i++) {
+    if(i==3) {
+      break;
+    }
+    console.log(i);
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Yuqoridagi ushbu kod 0 dan 2 gacha raqamlarni konsolga chiqaradi. i
+            = 3 bo'lganda loop uziladi. Boshqa ishlamaydi. Konsolga hech narsa
+            chiqamaydi.
+          </p>
+          <p>
+            <code>break</code> bayonotini 'while' tarorlovchi bilan ham
+            ishlatish mumkin.
+          </p>
+          <pre>
+<code>
+  let num = 1;
+
+  while(num&lt;=10){
+      if(num == 3){
+          break;
+      }
+      console.log(num);
+      num++;
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            'continue' bayonoti takrorlashda ma'lum shart bajarailgan holatni
+            tashlab ketib davom etishni uchun ishlatiladi. Masalan, mexmonxonada
+            50 ta xona bor va hammasi bo'sh. Siz 13 raqamini yomon ko'rasiz, va
+            sizga 13 dan boshqa mexmonxonadagi barcha xonalar raqami ro'yxati
+            kerak:
+          </p>
+          <pre>
+<code>
+  for (let xona = 1; xona &lt;= 50; xona ++) {
+    console.log(xona)
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            for (let xona = 1; xona <= 50; xona++) {
+              if (xona == 13) {
+                continue;
+              }
+              console.log(xona);
+            }
+          </script>
+          <p>
+            ushbu kod 13 raqamini tashlab ketgan xolda 1 dan 50 gacha bo'lgan
+            raqamlarni konsolga chiqaradi.
+          </p>
+        </article>
+      </section>
+      <section id="toqqizinchi">
+        <h2>Function (fankshn yoki funksiya)</h2>
+        <p>
+          function ingliz tilidan o'zbek tiliga 'vazifa' deb tarjima qilinadi.
+          <i>(fankshn deb o'qiladi)</i> Ma'lum bir vazifani bajarish uchun
+          yozilgan kodlar toplami fankshn bilan o'raladi. Fankshnga nom
+          beriladi. Keyin har safar kerak bo'lganda fankshn nomi ko'rsatiladi va
+          fankshn ishga tushiriladi. Fankshnni nomini yozib ishga tushirilish,
+          dasturlashda fankshnni chaqirish deyiladi.
+        </p>
+        <nav>
+          <h3>Mundarija</h3>
+          <ul>
+            <li><a href="#fankshn">function</a></li>
+            <li><a href="#fankshnParametrlari">fankshn parametrlari</a></li>
+            <li><a href=""></a></li>
+          </ul>
+        </nav>
+        <article id="fankshn">
+          <p>
+            Fankshn yasash uchun 'function' kalit so'zi yoziladi va fankshnga
+            nom beriladi.
+          </p>
+          <pre>
+<code>
+  function nom () {
+    //bajarilishi kerak bo'lga kod;
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>Masalan, quyida 'qutlov' deb nomlangan fankshn yaratamiz.</p>
+          <pre>
+<code>
+  function qutlov () {
+    console.log('Vebsahifamga xush kelibsiz!');
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            function qutlov() {
+              console.log("Vebsahifamga xush kelibsiz!");
+            }
+          </script>
+          <p>fankshn yaratilgandan keyin uni chaqirish mumkin. Masalan:</p>
+          <pre>
+<code>
+  function qutlov () {
+    console.log('Vebsahifamga xush kelibsiz!');
+  }
+  qutlov ();
+  qutlov ();
+  qutlov ();
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            qutlov();
+          </script>
+        </article>
+        <hr />
+        <article id="fankshnParametrlari">
+          <h3>fankshn parametrlari</h3>
+          <p>
+            E'tibor bergan bo'lsangiz fankshn yaratganda fankshn nomidan keyin
+            qavslar () yoziladi. Ushbu qavslar aslida fankshn parametrlari uchun
+            mo'ljallangan. Parametrlardan fankshn ichida veriebl kabi
+            foydalanish mumkin. Quyidagi misolda 'qutlov' nomli fankshnga 'ism'
+            deb nomlangan parametr kiritamiz:
+          </p>
+          <pre>
+<code>
+  function qutlov2 (ism) {
+    console.log(`Hurmatli, ${ism} vebsahifamga xush kelibsiz!`)
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Parametrli fankshnni chaqirganda uni nomi bilan birga parametr
+            yozish kerak. Maslan yuqoridagi qutlov2 fankshnini quyiagicha
+            chaqiriladi:
+          </p>
+          <pre>
+<code>
+  function qutlov2 (ism) {
+    console.log(`Hurmatli, ${ism}. Vebsahifamga xush kelibsiz!`)
+  }
+  qutlov2 ("Azamat");
+  qutlov2 ("Bahora");
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            function qutlov2(ism) {
+              console.log(`Hurmatli, ${ism}. Vebsahifamga xush kelibsiz!`);
+            }
+            qutlov2("Azamat");
+            qutlov2("Bahora");
+          </script>
+          <p>
+            Yuqorida misolda ko'rib turganingiz kabi funksiyani har xil parametr
+            bilan chaqirib har xil natija olish mumkin. Fankshn bir necht
+            parametr olishi ham mumkin. Buning uchun ularni vergul (,) bilan
+            ajratish kerak. Masalan:
+          </p>
+          <pre>
+<code>
+  function xabar (ism, balans) {
+    console.log(`Hurmatli ${ism}. Hisobingizda ${balans} so'm mavjud.`);
+  }
+  xabar (Azamat, 3500);
+  xabar (Bahora, 4200);
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Fankshndan tashqarida yaratilgan o'zgaruvchilarni (veriebl) fankshn
+            parametri sifatida ko'rsatish mumkin. Masalan:
+          </p>
+          <pre>
+<code>
+  function xabar2(ism2, balans2) {
+    console.log(
+      `Hurmatli ${ism2}. Hisobingizda ${balans2} so'm mavjud.`);
+  }
+  let YuzerIsmi = "Dilmurod";
+  let YuzerBalansi = 6900;
+  xabar2(YuzerIsmi, YuzerBalansi);
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            function xabar2(ism2, balans2) {
+              console.log(
+                `Hurmatli ${ism2}. Hisobingizda ${balans2} so'm mavjud.`);
+            }
+            let YuzerIsmi = "Dilmurod";
+            let YuzerBalansi = 6900;
+            xabar2(YuzerIsmi, YuzerBalansi);
+          </script>
         </article>
       </section>
     </main>
