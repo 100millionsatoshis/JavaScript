@@ -19,9 +19,7 @@
   </head>
   <body>
     <header class="mainMenu">
-      <ul>
-        <li><a href="/MarraUniversity/index.html">Uyga</a></li>
-      </ul>
+      <a href="/MarraUniversity/index.html"><h3>Uyga</h3></a>
       <details onclick="closeOtherMenus('menu1')">
         <summary>
           <h3>HTML darslar jadvali</h3>
@@ -218,7 +216,15 @@
           <ul>
             <li>
               JavaScript dunyodagi eng keng tarqalgan dasturlash tillaridan
-              biridir. stackoverflow.co 
+              biridir. stackoverflow.com saytining so'rovnomasiga qaraganda
+              so'rovnomada qatnashgan dasturchilarning 65% JavaScript da
+              ishlashadi.
+              <figure>
+                <img
+                  src="/MarraUniversity/JavaScript/media/stackoverflowsurveylanguages.png"
+                  alt="stackoverflow.com saytining so'rovnomasiga qaraganda so'rovnomada qatnashgan dasturchilarning 65% JavaScript da ishlashadi."
+                />
+              </figure>
             </li>
             <li>
               JavaScriptni yuklab olish shart emas. U allaqachon sizning
@@ -256,22 +262,22 @@
           <details>
             <summary>Kod qismini ko'rsat</summary>
             <pre>
-  <code>
-      &lt;p id="misolUchun"&gt; 
-          JavaScript HTML elementi tarkibini o'zgartirishga qodir 
-      &lt;/p&gt;
-      &lt;button 
-          type="button" 
-          onclick='document.getElementById("misolUchun").innerHTML = 
-          "Salom JavaScript"'&gt;
-              Meni bos 
-      &lt;/button&gt;
-  </code><span class="tilNomi">HTML</span>
-  </pre>
+<code>
+    &lt;p id="misolUchun"&gt; 
+        JavaScript HTML elementi tarkibini o'zgartirishga qodir 
+    &lt;/p&gt;
+    &lt;button 
+        type="button" 
+        onclick='document.getElementById("misolUchun").innerHTML = 
+        "Salom JavaScript"'&gt;
+            Meni bos 
+    &lt;/button&gt;
+</code><span class="tilNomi">HTML</span>
+</pre>
           </details>
           <p>
-            JavaScriptda ham qo'shtirnoq ham yakka tirnoqlardan foydalanish
-            mumkin.
+            JavaScriptda ham qo'shtirnoqlar ("") ham yakka tirnoqlardan ('')
+            foydalanish mumkin.
           </p>
           <p>
             Quyidagi misolda ikkita tasvirdan foydalandik. Biri qorong'ulik
@@ -280,16 +286,16 @@
             o'chirish deb yozamiz:
           </p>
           <pre>
-  <code>
-      &lt;img id="meningTasvirim" src="qorong'ulik.png"&gt;
-      &lt;button 
-          onclick="document.getElementById('meningTasvirim').src='qoronghulik.png'"&gt;
-      &lt;/button&gt;
-      &lt;button 
-          onclick="document.getElementById('meningTasvirim').src='chiroq.png'"&gt;
-      &lt;/button&gt;
-  </code><span class="tilNomi">HTML</span>
-  </pre>
+<code>
+  &lt;img id="meningTasvirim" src="qorong'ulik.png"&gt;
+  &lt;button 
+    onclick="document.getElementById('meningTasvirim').src='qoronghulik.png'"&gt;
+  &lt;/button&gt;
+  &lt;button 
+    onclick="document.getElementById('meningTasvirim').src='chiroq.png'"&gt;
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <figure>
             <img
               id="meningTasvirim"
@@ -329,18 +335,18 @@
             yordamida tugma yaratiladi va quyidagi JavaScript kodi yoziladi:
           </p>
           <pre>
-  <code>
-      &lt;p id="misolUchun"&gt;
-          JavaScript bilan HTML fasonini o'zgartirish mumkin. Masalan: 
-      &lt;/p&gt;
-      &lt;button 
-          type="button" 
-          onclick="document.getElementById('misolUchun').style.fontSize='3rem'"
-          &gt; 
-          Meni bos 
-      &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+    &lt;p id="misolUchun"&gt;
+        JavaScript bilan HTML fasonini o'zgartirish mumkin. Masalan: 
+    &lt;/p&gt;
+    &lt;button 
+        type="button" 
+        onclick="document.getElementById('misolUchun').style.fontSize='3rem'"
+        &gt; 
+        Meni bos 
+    &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
         </article>
         <hr />
         <article id="htmlElementniYashirish">
@@ -361,23 +367,23 @@
             va yashirishga (visibility: hidden) misol keltiramiz:
           </p>
           <pre>
-  <code>
-      &lt;p id="ohchirish"&gt;
-          Tugma bosilganda ushbu element o'chiriladi.
-      &lt;/p&gt;
-      &lt;button 
-          onclick="document.getElementById('ohchirish').style.display='none'"&gt;
-          O'chir
-      &lt;/button&gt;
-      &lt;p id="yashirish"&gt;
-          Tugma bosilganda ushbu element yashiriladi.
-      &lt;/p&gt;
-      &lt;button 
-          onclick="document.getElementById('yashirish').style.visibility='hidden'"&gt;
-          Yashir
-      &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+    &lt;p id="ohchirish"&gt;
+        Tugma bosilganda ushbu element o'chiriladi.
+    &lt;/p&gt;
+    &lt;button 
+        onclick="document.getElementById('ohchirish').style.display='none'"&gt;
+        O'chir
+    &lt;/button&gt;
+    &lt;p id="yashirish"&gt;
+        Tugma bosilganda ushbu element yashiriladi.
+    &lt;/p&gt;
+    &lt;button 
+        onclick="document.getElementById('yashirish').style.visibility='hidden'"&gt;
+        Yashir
+    &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <p id="ohchirish">Tugma bosilganda ushbu element o'chiriladi.</p>
           <button
             onclick="document.getElementById('ohchirish').style.display='none'"
@@ -396,31 +402,31 @@
             elementlarni joyiga qaytaradi. Masalan:
           </p>
           <pre>
-  <code>
-    &lt;p id="ohchirish"&gt;
-        Tugma bosilganda ushbu element o'chiriladi.
-    &lt;/p&gt;
-    &lt;button 
-        onclick="document.getElementById('ohchirish').style.display='none'"&gt;
-        O'chir
-    &lt;/button&gt;
-    &lt;button 
-        onclick="document.getElementById('ohchirish').style.display='block'"&gt;
-        Qaytar
-    &lt;/button&gt;
-    &lt;p id="yashirish"&gt;
-        Tugma bosilganda ushbu element yashiriladi.
-    &lt;/p&gt;
-    &lt;button 
-        onclick="document.getElementById('yashirish').style.visibility='hidden'"&gt;
-        Yashir
-    &lt;/button&gt;
-    &lt;button 
-        onclick="document.getElementById('yashirish').style.visibility='visible'"&gt;
-        Ko'rsat
-    &lt;/button&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;p id="ohchirish"&gt;
+      Tugma bosilganda ushbu element o'chiriladi.
+  &lt;/p&gt;
+  &lt;button 
+      onclick="document.getElementById('ohchirish').style.display='none'"&gt;
+      O'chir
+  &lt;/button&gt;
+  &lt;button 
+      onclick="document.getElementById('ohchirish').style.display='block'"&gt;
+      Qaytar
+  &lt;/button&gt;
+  &lt;p id="yashirish"&gt;
+      Tugma bosilganda ushbu element yashiriladi.
+  &lt;/p&gt;
+  &lt;button 
+      onclick="document.getElementById('yashirish').style.visibility='hidden'"&gt;
+      Yashir
+  &lt;/button&gt;
+  &lt;button 
+      onclick="document.getElementById('yashirish').style.visibility='visible'"&gt;
+      Ko'rsat
+  &lt;/button&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <p id="ohchirish2">Tugma bosilganda ushbu element o'chiriladi.</p>
           <button
             onclick="document.getElementById('ohchirish2').style.display='none'"
@@ -470,7 +476,7 @@
               <a href="#izoh">Izoh yozish</a>
             </li>
             <li>
-              <a href="#bayonot">JavaScript bayonot</a>
+              <a href="#bayonot">JavaScript bayonot (statement)</a>
             </li>
           </ul>
         </nav>
@@ -478,38 +484,38 @@
         <article id="jsQayergaVaQanday">
           <h2>JavaScript qayerga va qanday yoziladi?</h2>
           <p>
-            JavaScriptni xuddi CSS kabi HTML kodi ichiga joylash mumkin. Buning
-            uchun uni &lt;script&gt; and &lt;/script&gt; teglari orasiga joylash
-            kerak.
+            JavaScriptni, xuddi CSS kabi, HTML kodi ichiga joylash mumkin.
+            Buning uchun uni ochuvchi &lt;script&gt; and yopuvchi
+            &lt;/script&gt; teglari orasiga joylash kerak.
           </p>
           <pre>
-  <code>
-    &lt;script&gt;
-      document.getElementById("misolUchun").innerHTML = "1-chi JavaScript kodim";
-    &lt;/script&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;script&gt;
+    document.getElementById("misolUchun").innerHTML = "1-chi JavaScript kodim";
+  &lt;/script&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <p>JavaScript kodini HTMLning &lt;head&gt; qismida yozish mumkin:</p>
           <pre>
-  <code>
-    &lt;!DOCTYPE html&gt;
-    &lt;html&gt;
-    &lt;head&gt;
-      &lt;script&gt;
-        function meningFunksiyam() {
-          document.getElementById("misolUchun").innerHTML = "yangi matn";
-        }
-      &lt;/script&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-      &lt;p id="misolUchun"&gt; Tugma bosilganda ushbu matn o'zgarib qoladi.&lt;/p&gt;
-      &lt;button type="button" onlick="meningFunksiyam()"&gt;
-         Bosib ko'r 
-      &lt;/button&gt;
-    &lt;/body&gt;
-    &lt;/html&gt;
-  </code><span class="tilNomi">HTML/JS</span>
-  </pre>
+<code>
+  &lt;!DOCTYPE html&gt;
+  &lt;html&gt;
+  &lt;head&gt;
+    &lt;script&gt;
+      function meningFunksiyam() {
+        document.getElementById("misolUchun").innerHTML = "yangi matn";
+      }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;p id="misolUchun"&gt; Tugma bosilganda ushbu matn o'zgarib qoladi.&lt;/p&gt;
+    &lt;button type="button" onlick="meningFunksiyam()"&gt;
+        Bosib ko'r 
+    &lt;/button&gt;
+  &lt;/body&gt;
+  &lt;/html&gt;
+</code><span class="tilNomi">HTML/JS</span>
+</pre>
           <p>
             Yuqoridagi kodda "function" kalit so'zi ishlatilgan. Function
             nimaligini tushunib olish uchun kundalik hayotdan misol keltiramiz:
@@ -634,12 +640,12 @@
         </article>
         <hr />
         <article id="izoh">
-          <h2>Izoh</h2>
+          <h2>Izoh (comment)</h2>
           <p>
             Izoh yozilgan kodni izohlash uchun ishlatiladi. HTML va CSS da
             bo'lgani kabi JavaScriptda izoh foydalanuvchiga ko'rinmaydi. Bir
             qatorli izoh yozish uchun ikkita oldinga kesim belgisi (ingliz
-            tilida farqard slash deyiladi <i>forvort slesh deb o'qiladi.</i>)
+            tilida farward slash deyiladi <i>forvort slesh deb o'qiladi.</i>)
             ishlatiladi. Masalan:
           </p>
           <pre>
@@ -733,11 +739,11 @@
             quyidagi ikkita bayonot bir xil kuchga ega:
           </p>
           <pre>
-  <code>
-    alert("Ehtiyot bo'ling");
-    alert ( " Ehtiyot bo'ling " );
-  </code><span class="tilNomi">JS</span>
-  </pre>
+<code>
+  alert("Ehtiyot bo'ling");
+  alert ( " Ehtiyot bo'ling " );
+</code><span class="tilNomi">JS</span>
+</pre>
           <p>
             JavaScriptda bayonotlarni chimchilangan qavslar ichida bir to'plamga
             o'rash mumkin. JavaScript bayonotlarini bir to'plamga o'rashdan
@@ -2907,8 +2913,8 @@ yoqildi`;
           }
         }
       }
-      let plar = document.getElementsByTagName('p')
-      console.log(plar)
+      let plar = document.getElementsByTagName("p");
+      console.log(plar);
     </script>
   </body>
 </html>
