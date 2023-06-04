@@ -22,7 +22,7 @@
       <ul>
         <li><a href="/MarraUniversity/index.html">Uyga</a></li>
       </ul>
-      <details>
+      <details onclick="closeOtherMenus('menu1')">
         <summary>
           <h3>HTML darslar jadvali</h3>
         </summary>
@@ -39,12 +39,12 @@
           </li>
           <li>
             <a href="/MarraUniversity/html/darsining.html#uchinchisi">
-              Matnga ishlov berish
+              Matn bilan ishlash
             </a>
           </li>
           <li>
             <a href="/MarraUniversity/html/darsining.html#tortinchisi">
-              Izoh
+              Visual Studio Code
             </a>
           </li>
           <li>
@@ -79,7 +79,7 @@
           </li>
         </ol>
       </details>
-      <details>
+      <details onclick="closeOtherMenus('menu2')">
         <summary class="jadvalBoshMenyusi">
           <h3>CSS darslar jadvali</h3>
         </summary>
@@ -134,7 +134,7 @@
           </li>
         </ol>
       </details>
-      <details>
+      <details onclick="closeOtherMenus('menu3')">
         <summary>
           <h3>JavaScript</h3>
         </summary>
@@ -175,9 +175,7 @@
             </a>
           </li>
           <li>
-            <a href="/MarraUniversity/JavaScript/js.html#sakkizinchi"
-              >Loop
-            </a>
+            <a href="/MarraUniversity/JavaScript/js.html#sakkizinchi">Loop </a>
           </li>
           <li>
             <a href="/MarraUniversity/JavaScript/js.html#toqqizinchi"
@@ -220,7 +218,7 @@
           <ul>
             <li>
               JavaScript dunyodagi eng keng tarqalgan dasturlash tillaridan
-              biridir.
+              biridir. stackoverflow.co 
             </li>
             <li>
               JavaScriptni yuklab olish shart emas. U allaqachon sizning
@@ -2717,7 +2715,7 @@ yoqildi`;
           <ul>
             <li><a href="#fankshn">function</a></li>
             <li><a href="#fankshnParametrlari">fankshn parametrlari</a></li>
-            <li><a href=""></a></li>
+            <li><a href="#return">fankshndan chiquvchi</a></li>
           </ul>
         </nav>
         <article id="fankshn">
@@ -2831,12 +2829,62 @@ yoqildi`;
           <script>
             function xabar2(ism2, balans2) {
               console.log(
-                `Hurmatli ${ism2}. Hisobingizda ${balans2} so'm mavjud.`);
+                `Hurmatli ${ism2}. Hisobingizda ${balans2} so'm mavjud.`
+              );
             }
             let YuzerIsmi = "Dilmurod";
             let YuzerBalansi = 6900;
             xabar2(YuzerIsmi, YuzerBalansi);
           </script>
+        </article>
+        <hr />
+        <article id="return">
+          <h3>fankshndan qaytish</h3>
+          <p>
+            fankshn odatda ma'lumot qabul qiladi (input) va qayta ishlangan
+            ma'lumotni qaytarib chiqaradi (output). Ma'lumot qabul qiladi
+            deganda parametrlar nazarda tutiladi. Shu paytgacha biz fankshn
+            ichida <code>console.log()</code> dan foydalanib fankshn natijasini
+            konsolga chiqardik. Lekin bazida fankshn natijasini konsolga
+            chiqarish kerak bo'lmaydi. Masalan fankshn natijasini verieblga
+            biriktirish kerak bo'ladi. Bunday xolda biz <code>return</code> dan
+            foydalanib fankshn natijasini fankshndan tashqariga chiqaramiz.
+            'return' ingliz tilidan o'zbek tiliga 'qaytish' yoki 'qaytarish' deb
+            tarjima qilinadi. <i>(retuan deb o'qiladi)</i>
+          </p>
+          <pre>
+<code>
+  function qoshish (a, b) {
+    return a + b;
+  }
+</code><span class="tilNomi">JS</span>
+</pre>
+          <p>
+            Endi fankshnni chaqirib uning natijasini verieblga biriktirish
+            mumkin:
+          </p>
+          <pre>
+<code>
+  function qoshish (a, b) {
+    return a + b;
+  }
+  let javob = qoshish(2, 3); //'javob' nomli yasaldi
+  console.log(javob)
+</code><span class="tilNomi">JS</span>
+</pre>
+          <script>
+            function qoshish(a, b) {
+              return a + b;
+            }
+            let javob = qoshish(2, 3);
+            console.log(javob);
+          </script>
+          <p>Yuqoridagi kod konsolga 5 raqamini chiqaradi.</p>
+          <p>
+            <code>return</code> bayonoti fankshnda tugatuvchi bayonot
+            hisoblanadi va undan keyin yozilgan har qanday kod e'tiborga
+            olinmaydi ya'ni bajarilmay tashlab ketiladi.
+          </p>
         </article>
       </section>
     </main>
@@ -2848,5 +2896,19 @@ yoqildi`;
         facilis!
       </p>
     </footer>
+    <script>
+      function closeOtherMenus(clickedMenuId) {
+        const allMenus = document.getElementsByTagName("details");
+        for (let i = 0; i < allMenus.length; i++) {
+          const menu = allMenus[i];
+          const menuId = menu.id;
+          if (menuId !== clickedMenuId) {
+            menu.removeAttribute("open");
+          }
+        }
+      }
+      let plar = document.getElementsByTagName('p')
+      console.log(plar)
+    </script>
   </body>
 </html>
